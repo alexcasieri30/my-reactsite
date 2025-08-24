@@ -1,0 +1,83 @@
+- overall theme ideas
+	- shop
+		- more generic, smooth/rounded edges
+		- modern looking
+		- light/smooth colors
+
+GAMES:
+- games page
+	- users can log in with their blog credentials 
+		- allow me to keep track of game progress in database
+	- add animations to the buttons / backgrounds
+	- add small animations throughout the page, little gifs, moving shapes, etc.
+	- background to the /games endpoint
+		- lots of room for images/
+
+- wheres waldo
+	- almost finished -- touching up for 2 other maps
+	- need to add game directions on the home page
+	- game over logic
+		- game over page
+		- keep track of stats -- in database
+		- show games table to user
+- etchasketch
+	- add image pixels to database
+	- show the previous images on page load
+- tictactoe
+	- change game over screen
+
+
+- home page
+	- complete the site features section
+	- add more images / description / titles to each section
+	- read more from about me section goes to about page with "me" tab active
+	- read more from the site features section goes to about page with "site" tab active
+
+
+- about page - history of website / about the author
+	- main content -> 2 tabs for user to click on:
+		1. about the website (history/how it was made/etc)
+			- different versions of it, my ideas, motivations behind it, etc.
+		2. about the author (more in depth details about me)
+
+
+- blog page
+	- add support for categories
+	- add "sort by" -> time button/dropdown
+	- add support for sending direct messages
+		- add database support for this
+
+- other ideas
+	- login button for any page that you are on
+	- anywhere on the website, there can be a popup that asks
+	the user if they want to leave a comment
+		- the comment will automatically set the category based on where 
+		they are in the website
+	
+	- idea for right side of page
+		- once I get Node.js down, the right side can be a small popup 
+		for users to leave comments on each page they visit
+		- example: on games page, the popup says "let me know your feedback for each of these games, and how I can improve them, or any general comments about them
+		- these are sent to the blog page 
+
+
+
+GAMES PAGE --> MACHINE LEARNING PAGE
+
+- ideas/steps
+
+- set up a flask server with different endpoints 
+	- server starts, and is used solely for the purpose of holding the python ML algorithms 
+	- that are used when users click on "Machine Learning" under the games section
+
+- previous ML projects -> titanic/boston housing/NLP
+	- use those ML models to allow the user to input some values
+	- those values sent to flask backend, model responds with predictions
+
+- new ideas for "games" 
+	- user enters a phrase, phrase gets sent to ML model, 
+		- model spits out emotion/sentiment of the phrase
+	- user uploads a picture, model tries to predict what the image is
+		- user upload input style
+		- will have to do more research on this
+

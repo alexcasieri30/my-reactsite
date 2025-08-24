@@ -1,0 +1,19 @@
+$name: "tictactoe";
+
+##{$name}-background{
+    height: 100%;
+    width: 100%;
+}
+
+##{$name}-title{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30pt;
+    margin-bottom: 40px;
+}
+##{$name}-section{
+    background: linear-gradient(#DECBA4, #3E5151);
+    height: 100vh;
+    min-height: 80em;
+
+}

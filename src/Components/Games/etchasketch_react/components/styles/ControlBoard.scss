@@ -1,0 +1,57 @@
+.controlBoard-main{
+    width: 500px;
+    display:flex;
+    justify-content:center;
+    
+    .option-dropdown{
+        height: 40px;
+    }
+    .colorGrid{
+        margin-left: 5px;
+        display:grid;
+        grid-template-rows: repeat(2, 20px);
+        grid-template-columns: repeat(5, 20px);
+        .color-grid-cell{
+            &:hover{
+                border: solid 3px black;
+            }
+            &:active{
+                border: solid 3px black;
+            }
+            &:selected{
+                border: solid 3px black;
+            }
+        }
+        
+        #randomColor{
+            height: 40px;
+            width: 40px;
+            border: solid 1px black;
+        }
+    }
+    .eraser{
+        margin-left: 5px;
+        #eraser{
+            height: 40px;
+            width: 80px;
+            background-color: rgba(0,0,0,0.2);
+            border: outset 4px gray;
+            cursor:pointer;
+            &:hover{
+                border: inset 2px gray;
+            }
+            &:active{
+                border: inset 5px gray;
+            }
+            &:focus{
+                border: inset 5px gray;
+            }
+
+        }
+    }
+    
+}
+
+.active{
+    border: solid 3px black;
+}

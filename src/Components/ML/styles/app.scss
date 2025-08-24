@@ -1,0 +1,192 @@
+hr{
+    background-color: black;
+}
+.ml-home-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 5em;
+    .project{
+        padding: 2em 0 4em 0;
+        flex: 1;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        margin: auto;
+        width: 100%;
+        border: solid 1px black;
+        height: max-content;
+        .project-title{
+            padding: 0 1em 1em 1em;
+            font-size: 30pt;
+            display:flex;
+            justify-content: space-between;
+        }
+        .project-form-questions{
+            width: 75%;
+            margin: auto;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            gap: 1em;
+            .ml-input-div{
+                flex: 0.8;
+                height: max-content;
+                & > input{
+                    width: 100%;
+                    padding: 10px;
+                }
+            }
+        }
+        #titanic-submit-button{
+            margin: auto;
+            display:flex;
+            justify-content:center;
+            & > button{
+                width: 80px;
+                height: 40px;
+                cursor: pointer;
+                border: none;
+                border-radius: 10px;
+                &:hover{
+                    background-color: rgba(142, 110, 132, 0.6);
+                }
+                &:active{
+                    border: solid 3px black;
+                }
+            }
+        }
+        .titanic-result{
+            border: solid 1px black;
+            height: 5em;
+            width: 50%;
+            margin: auto;
+        }
+    }
+}
+
+
+.ml-top-title{
+    flex: 1;
+    text-align: center;
+    font-size: 40pt;
+    margin-bottom: 2%;
+    .ml-top-title-featured{
+        font-family: featured;
+        text-align: center;
+        color: black;
+    }
+    .ml-top-title-games{
+        font-family: games;
+        font-size: 50pt;
+        text-align: center;
+        color: black;
+    }
+}
+
+.ml-top-right{
+    flex: 1;
+    .ml-top-dropdown{
+        margin-top: 2em;
+    }
+}
+.ml-top-left{
+    flex: 1;
+}
+
+.ml-top-controls{
+    display:flex;
+}
+
+#numbers-project{
+    padding: 2em 0 2em 0;
+    flex: 1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin: auto;
+    width: 100%;
+    height: max-content;
+    display:flex;
+    flex-direction:row;
+    margin-bottom: 2em;
+    height: 600px;
+    gap: 2em;
+    .numbers{
+        flex: 0.2;
+        .numbers-result-pred{
+            margin: 1em;
+            text-align: center;
+            .numbers-result-pred-title{
+                font-size: 18pt;
+            }
+            .numbers-result-pred-num{
+                margin: 0.5em;
+                font-size: 40pt;
+            }
+        }
+    }
+
+    .numbers-result{
+        flex: 0.8;
+        display:flex;
+        flex-direction:row;
+        gap: 1em;
+        height: 500px;
+        .numbers-result-perc{
+            flex: 0.9;
+            .numbers-result-perc-graph{
+                display:flex;
+                flex-direction:row;
+                border-left: solid 1px black;
+                border-bottom: solid 1px black;
+                .number-perc{
+                    flex: 1;
+                    width: 5em;
+                    text-align: center;
+                }
+            }
+            .numbers-result-perc-xaxis{
+                display:flex;
+                flex-direction:row;
+                margin-top: 2em;
+                justify-content:center;
+                text-align: center;
+                
+                .x-axis{
+                    flex: 1;
+                    font-size: 18pt;
+                }
+            }
+            .numbers-result-perc-expl{
+                font-size: 18pt;
+                text-align: center;
+                margin: 1em;
+            }
+        }
+    }
+}
+
+
+.submit-number-grid{
+    display:flex;
+    justify-content:center;
+    padding: 10px;
+    & > button{
+        cursor: pointer;
+        height: 40px;
+        width: 80px;
+        border: none;
+        border-radius: 8px; 
+        &:hover{
+            background-color: rgba(0,0,0,0.3);
+        }
+        &:active{
+            border: solid 3px black;
+        }
+    }
+}

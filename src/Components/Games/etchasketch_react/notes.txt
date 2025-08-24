@@ -1,0 +1,26 @@
+components
+
+1. active board - function component
+    - contains a control board at the top
+    - gets all attributes from the control board
+    - new, save, clear are in active board, not control board
+    - save button sends the info to saved board component
+
+return (
+    <div>
+        <controlBoard/>
+        <div>
+            actual board - onMouseOver={}
+        </div>
+    </div>
+)
+
+
+2. control board - class component
+    - responsible for buttons, dropdowns, etc.
+    - users set the state of the control board
+    - gets all information from control board
+    - active board sends all setState functions to the controlbaord
+
+3. saved board
+    - state is a list of smaller board objects

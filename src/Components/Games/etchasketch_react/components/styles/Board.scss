@@ -1,0 +1,102 @@
+$name: "esketch";
+
+.#{$name}-background{
+}
+
+.#{$name}-page{
+    background-color: lightblue;
+    display:flex;
+    flex-direction:column;
+    height: 100vh;
+    width: 100%;
+    min-height: 80em;
+    .#{$name}-section-top{
+        flex: 0.1;
+    }
+    .#{$name}-Board{
+        margin-top: 40px;
+        flex: 0.6;
+        display:flex;
+        flex-direction:row;
+        .#{$name}-Board-left{
+            flex: 0.35;
+            width: 100%;
+        }
+        .#{$name}-Board-middle{
+            flex: 0.3;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            .layout-buttons{
+                display:flex;
+                justify-content:center;
+            }
+            .#{$name}-Board-Board{
+                width: 500px;
+                height: 500px;
+                
+                .#{$name}-Board-grid-container{
+                    border: solid 1px black;
+                    display:flex;
+                    justify-content:center;
+                    .#{$name}-Board-draw{
+                        margin: 20px;
+                        height: 90%;
+                        border: solid 1px black;
+                        display:grid;
+                        grid-template-columns: repeat(10, 45px);
+                        grid-template-rows: repeat(10, 45px);
+                        .gridCell{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .#{$name}-Board-right{
+            flex: 0.35;
+        }
+    }
+    .#{$name}-section-bottom{
+        flex: 0.2;
+    }
+}
+
+.layout-button{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+#save-image-button{
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    border: outset 2px gray;
+    background-color: rgba(0,0,240,0.3);
+    
+    &:active{
+        border: inset 2px gray;
+    }
+}
+#clear-image-button{
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    border: outset 2px gray;
+    background-color: rgba(0,0,240,0.3);
+    
+    &:active{
+        border: inset 2px gray;
+    }
+}
+#new-image-button{
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    border: outset 2px gray;
+    background-color: rgba(0,0,240,0.3);
+    
+    &:active{
+        border: inset 2px gray;
+    }
+}

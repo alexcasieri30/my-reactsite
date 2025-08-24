@@ -1,0 +1,186 @@
+@font-face{
+    font-family: memory;
+    src: url('../../../../../Assets/Fonts/memory.otf')
+}
+@font-face{
+    font-family: rules;
+    src: url('../../../../../Assets/Fonts/rules.otf')
+}
+@font-face{
+    font-family: rules_text;
+    src: url('../../../../../Assets/Fonts/rules_text.ttf')
+}
+@font-face{
+    font-family: text;
+    src: url('../../../../../Assets/Fonts/text.ttf')
+}
+
+$image-dimension: 115px;
+$name: "memory";
+
+%button-template{
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(0,0,250,0.3);
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+}
+
+.#{$name}-background{
+    height: 100vh;
+    width: 100%;
+}
+.#{$name}-app{
+    display:flex;
+    justify-content: center;
+    height: 100%;
+    min-height: 80em;
+    background: linear-gradient(#e66465, #9198e5);
+    .#{$name}-div-left{
+        flex: 0.2;
+    }
+    .#{$name}-board{
+        margin-top: 40px;
+        background: rgba(0,0,0,.2);
+        border-radius: 20px;
+        #instructions{
+            height: 500px;
+            #memory-title{
+                font-size: 30pt;
+                text-align:center;
+                margin-top: 20px;
+                font-family: memory;
+            }
+            #memory-rules{
+                font-family: rules;
+                font-size: 25pt;
+                text-align:center;
+            }
+            #memory-rules-text{
+                margin-top: 40px;
+                margin-left: 100px;
+                margin-right: 100px;
+                font-size: 15pt;
+                text-align: justify;
+                font-family: text;
+                line-height: 25px;
+            }
+        }
+        .#{$name}-grid-container{
+            flex: 0.6;
+            padding: 20px;
+            display:grid;
+            grid-template-columns: repeat(4, 150px);
+            grid-template-rows: repeat(3, 150px);
+            gap: 15px;
+            align-items: center;
+            justify-items: center;
+        }
+        .#{$name}-grid-header{
+            height: 100px;
+            display:flex;
+            flex-direction:row;
+            #startgame-button{
+                @extend %button-template;
+                font-size: 20pt;
+                margin-top: 20px;
+                margin-left: 20px;
+                font-family: rules;
+                &:hover{
+                    background-color: rgba(0,0,250,0.5);
+                    border: solid 3px lightblue;
+                }
+                &:focus{
+                    border: solid 3px darkblue;
+                }
+            }
+            .#{$name}-grid-header-stats{
+                width: 100%;
+                display:flex;
+                flex-direction:row;
+                #current-status{
+                    flex: 0.6;
+                    font-size: 30pt;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                %#{$name}-stats-template{
+                    font-size: 20pt;
+                    margin-top: 20px;
+                    flex: 0.2;
+                }
+                #curr{
+                    @extend %#{$name}-stats-template;
+                    font-family: rules;
+                }
+                #best{
+                    @extend %#{$name}-stats-template;
+                    font-family: rules;
+                }
+            }
+        }
+    }
+    .#{$name}-div-right{
+        flex: 0.2;
+    }
+}
+.#{$name}-board{
+    height: 620px;
+    width: 685px;
+    overflow: scroll;
+    .card{
+        background: white;
+        height: $image-dimension;
+        width: $image-dimension;
+        border-radius: 8px;
+        cursor: pointer;
+        border: solid 1px black;
+        box-shadow: 0 8px 16px rgb(0 0 0 / 0.4);
+    }
+}
+
+.#{$name}-image{
+    border-radius: 8px;
+    width: $image-dimension;
+    height: $image-dimension;
+}
+
+
+
+.memory-leaderboard{
+    display:flex;
+    flex-direction:column;
+    .memory-leaderboard-title{
+        text-align: center;
+        font-size: 20pt;
+    }
+    .memory-leaderboard-selection{
+        display:flex;
+        flex-direction:row; 
+        justify-content:center;
+        gap: 2em;
+        padding: 1em;
+        cursor: pointer;
+    }
+    .prev-scores-table{
+        display:flex;
+        flex-direction:column;
+        width: 100%;
+        font-size: 15pt;
+        max-height: 20em;
+        overflow: scroll;
+        .prev-scores-table-row{
+            margin: 1em 5em 0 5em ;
+            flex: 1;
+            display:flex;
+            flex-direction:row;
+            gap: 1em;
+            .prev-scores-table-col{
+                flex: 1;
+                text-align: center;
+            }
+        }
+    }
+}
+

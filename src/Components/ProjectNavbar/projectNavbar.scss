@@ -1,0 +1,107 @@
+@font-face{
+    font-family: featured;
+    src: url('../../Assets/Fonts/featured.ttf');
+}
+@font-face{
+    font-family: games;
+    src: url('../../Assets/Fonts/games.ttf');
+}
+.project-navbar-carousel{
+    height: 20em;
+    width: 10em;
+}
+
+.games-header{
+    display:flex;
+    flex-direction:column;
+    margin-top: 5em;
+    .project-header-title{
+        margin-bottom: 2%;
+        display:flex;
+        .project-header-title-left{
+            flex: 1;
+            .project-header-title-left-settings{
+                border: solid 1px black;
+                padding: 1em;
+                display:flex;
+                justify-content: center;
+                margin: auto;
+                width: 25em;
+                margin-top: 3em;
+                cursor: pointer;
+                border-radius: 2em;
+                &:active{
+                    background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,100,0.8));
+                }
+            }
+        }
+        .project-header-title-featuredgames{
+            flex: 1;
+            font-size: 40pt;
+            color: white;
+            .project-header-title-featured{
+                font-family: featured;
+                text-align: center;
+            }
+            .project-header-title-games{
+                font-family: games;
+                font-size: 50pt;
+                text-align: center;
+            }
+        }
+        .project-header-title-right{
+            flex: 1;
+            .project-header-title-right-dropdown{
+                display:flex;
+                justify-content:center;
+                margin: auto;
+                padding-top: 2em;
+            }
+        }
+        
+    }
+    .project-navbar-carousel{
+        width: 10em;
+        height: 10em;
+    }
+    .project-navbar-content{
+        .project-navbar-container{
+            display:flex;
+            flex-direction:row;
+            text-align:center;
+            width: 100%;
+            margin-top: 10px;
+            .project-navbar-section{
+                border: solid 1px black;
+                flex: 1;
+                padding: 10px;
+                border-radius: 10px 10px 0px 0px;
+            }
+            .project-navbar-active{
+                border-bottom:none;
+            }
+            .project-navbar-link{
+                color: white;
+                text-decoration: none;
+                animation: dim 1s reverse 6;
+            }
+        }
+    }
+}
+
+@keyframes dim{
+    0%{
+        color: white;
+    }
+    50%{
+        color: gray;
+    }
+    100%{
+        color: white;
+    }
+}
+
+
+.game-settings-button-active{
+    background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,100,0.8));
+}

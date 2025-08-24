@@ -1,0 +1,36 @@
+
+.centralpark-background-main{
+    cursor: pointer;
+    height: 100vh;
+    width: auto;
+    background: none;
+    display:flex;
+    flex-direction:column;
+    
+    .centralpark-background-gameinfo{
+        margin-top: 2em;
+        flex: 0.2;
+        .centralpark-background-gameinfo-title{
+            flex: 0.4;
+            width: max-content;
+            color: white; 
+            font-size: 40pt;
+            padding: 0.5em 0 0 0.5em;
+            font-family: timessquare;
+            letter-spacing: 8px;
+        }
+    }
+    .centralpark-photo{
+        flex: 0.8;
+        z-index: 0;
+        display:flex;
+        justify-content:center;
+        .centralpark-photo-div{
+            position:relative;
+            #whereswaldo-img-background{
+                height: 50em;
+                width: auto;
+            }
+        }
+    }
+}
