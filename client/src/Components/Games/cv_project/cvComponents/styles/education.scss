@@ -1,0 +1,95 @@
+.title{
+    display:flex;
+    justify-content:center;
+}
+
+.EducationContent{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    .education-display{
+        width: 100%;
+        display:flex;
+        margin: 0 0 5em 5em;
+        .education-info-display{
+            width: 100%;
+            display:flex;
+            flex-direction:column;
+            gap: 10px;
+            .edu-title-div{
+                flex: 1;
+                .edu-title{
+
+                }
+            }
+            .edu-button-divs{
+                flex: 1;
+                display:flex;
+                gap: 10px;
+                .edu-button-div{
+                    & > button{
+                        width: 60px;
+                        height: 30px;
+                        border: none;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        font-size: 1rem;
+                        &:hover{
+                            border: solid 3px black;
+                        }
+                        &:active{
+                            background-color: rgba(0,0,0,0.4);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .education-input{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        width: 100%;
+        gap: 10px;
+        .education-line{
+            flex: 1;
+            display:flex;
+            flex-direction: row;
+            gap: 2em;
+            width: 80%;
+            justify-content:center;
+            margin:auto;
+            gap: 20px;
+            & > .line-input-div{
+                width: 100%;
+                display:flex;
+                justify-content:center;
+                & > input{
+                    width: 100%;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+.education-buttons{
+    flex: 1;
+    display:flex;
+    justify-content:center;
+    .education-save{
+        height: 40px;
+        width: 80px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1rem;
+        &:hover{
+            border: solid 3px black;
+        }
+        &:active{
+            background-color: rgba(0,0,0,0.4);
+        }
+    }
+}
+
