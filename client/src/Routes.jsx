@@ -29,6 +29,9 @@ import Cart from "./Components/Shop/components/Cart/MyCart";
 import Checkout from "./Components/Shop/components/Cart/Checkout";
 import Item from "./Components/Shop/components/Items/Item";
 
+
+import PhotoGallery from "./Components/PhotoGallery/PhotoGallery";
+
 const routes = [
 
     <Route path="/" element={<Home/>}/>,
@@ -50,6 +53,9 @@ const routes = [
     <Route path="/games/sketch" element={<Sketch/>}/>,
     <Route path="/games/tictactoe" element={<TictactoeBoard/>}/>,
     <Route path="/games/battleship" element={<Battleship/>}/>,
+
+    <Route path="/photo-gallery" element={<PhotoGallery/>}/>,
+
 
     <Route path="/shop" element={<Shop/>}/>,
     <Route path="/shop/all" element={<ShopAll/>}/>,

@@ -1,0 +1,7 @@
+Command to upload a photo 
+
+curl 
+    -X POST "http://localhost:3001/photogallery/upload" 
+    -F "description=sunsetchicago" 
+    -F "title=sunset" 
+    -F "photo=@/users/alexcasieri/desktop/sunset.jpeg"
