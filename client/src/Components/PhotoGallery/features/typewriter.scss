@@ -7,6 +7,10 @@
     width: max-content;
 }
 
+.animate-pulse{
+    height: 80px;
+}
+
 @media (min-width: 640px) {
     .title-text {
         font-size: 1.5rem;
@@ -17,4 +21,16 @@
     .title-text {
         font-size: 1.25rem;
     }
+}
+
+.animate-pulse {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+  font-size: 2.5rem;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
