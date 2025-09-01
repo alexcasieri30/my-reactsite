@@ -31,6 +31,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use('/uploads', express.static('uploads'));
+
 app.use('/posts', post_router);
 app.use('/users', user_router);
 app.use('/games', game_router);

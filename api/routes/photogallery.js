@@ -3,7 +3,7 @@ const multer = require('multer');
 const path = require('path');
 const router = express.Router();
 
-
+const fs = require('fs');
 const Pool = require('pg').Pool
 const pool = new Pool({
   user: 'postgres',
@@ -12,6 +12,8 @@ const pool = new Pool({
   password: 'wolf0435',
   port: 5432,
 })
+
+const UPLOADS_DIR = path.join(__dirname, '../uploads');
 
 
 
@@ -51,6 +53,22 @@ router.get('/', async (req, res) => {
 	} catch (err) {
 		res.status(500).json({ error: err.message });
 	}
+});
+
+router.get('/get_images', (req, res) => {
+  fs.readdir(UPLOADS_DIR, (err, files) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: 'Failed to list images' });
+    }
+
+    // Build URLs for each file
+    const images = files.map(file => ({
+      filename: file,
+      url: `${req.protocol}://${req.get('host')}/uploads/${file}`
+    }));
+    res.json(images);
+  });
 });
 
 // GET /photogallery/:id - get photo metadata

@@ -1,6 +1,6 @@
 
 import "./photogallery.scss";
-import PhotoGalleryMainPage from "./mainpage";
+import PhotoGalleryMainPage from "./PhotoGalleryMainPage";
 
 export default function PhotoGalleryPage(){
     return(
