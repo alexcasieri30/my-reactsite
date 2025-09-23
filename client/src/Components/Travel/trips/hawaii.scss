@@ -1,0 +1,32 @@
+.hawaii-header{
+    font-size: 36pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e40af;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+.hawaii-trip-section{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.hawaii-trip-text{
+    flex: 0.7;
+    font-size: 20pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #334155;
+    margin: 20px;
+    line-height: 1.5;
+}
+.hawaii-trip-section > p{
+    margin: 50px;   
+}
+
+.trip-details-container{
+    margin-top: 200px;
+}

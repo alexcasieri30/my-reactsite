@@ -28,9 +28,11 @@ import AboutPage from "./Components/Shop/components/About";
 import Cart from "./Components/Shop/components/Cart/MyCart";
 import Checkout from "./Components/Shop/components/Cart/Checkout";
 import Item from "./Components/Shop/components/Items/Item";
-
-
+import Plane from './Components/Travel/Plane';
 import PhotoGallery from "./Components/PhotoGallery/PhotoGallery";
+import HawaiiTrip from "./Components/Travel/trips/HawaiiTripPage";
+import PragueTrip from "./Components/Travel/trips/PragueTripPage";
+import SouthAmericaTrip from "./Components/Travel/trips/SouthAmericaTripPage";
 
 const routes = [
 
@@ -39,7 +41,7 @@ const routes = [
     <Route path="/blog" element={<Blog/>}/>,
     <Route path="/blog/users" element={<BlogUsers/>}/>,
     <Route path="/settings" element={<Settings/>}/>,
-
+    <Route path="/travel" element={<Plane/>}/>,
     <Route path="/ml" element={<ML/>}/>,
 
     // <Route path="/chooseGameType" element={<ChooseGameType/>}/>,
@@ -56,6 +58,9 @@ const routes = [
 
     <Route path="/photo-gallery" element={<PhotoGallery/>}/>,
 
+    <Route path="/travel/hawaii" element={<HawaiiTrip/>}/>,
+    <Route path="/travel/prague" element={<PragueTrip/>}/>,
+    <Route path="/travel/southamerica" element={<SouthAmericaTrip/>}/>,
 
     <Route path="/shop" element={<Shop/>}/>,
     <Route path="/shop/all" element={<ShopAll/>}/>,

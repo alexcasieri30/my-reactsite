@@ -1,0 +1,37 @@
+
+
+.sa-header{
+    font-size: 36pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e40af;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.trip-image {
+    width: 300px;       /* desired width */
+    height: 400px;      /* desired height */
+    object-fit: cover;  /* crop/fit image nicely without distortion */
+    margin: 20px;       /* optional spacing */
+}
+.sa-trip-section{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sa-trip-text{
+    flex: 0.7;
+    font-size: 18pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #334155;
+    margin: 20px;
+    line-height: 1.5;
+}
+.sa-trip-section > p{
+    margin: 50px;   
+}
+
+.trip-details-container{
+    margin-top: 200px;
+}

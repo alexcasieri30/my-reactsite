@@ -1,0 +1,23 @@
+.travel-container{
+    margin-top: 400px;
+}
+
+.trip-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 250px); /* 4 fixed columns */
+  gap: 100px;                              /* space between items */
+  justify-content: start;                  /* align grid to left */
+  width: calc(4 * 250px + 3 * 100px);      /* exact width for 4 cols + 3 gaps */
+  margin: 0 auto;                          /* center horizontally */
+}
+
+
+.trip-icon {
+  width: 250px;
+  height: 400px;
+  background: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

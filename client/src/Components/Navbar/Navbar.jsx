@@ -7,6 +7,7 @@ import Games from "../../Assets/Images/games.png";
 import PhotoGallery from "../../Assets/Images/photogallery-navbar.png";
 import About from "../../Assets/Images/about.png";
 import Blog from "../../Assets/Images/blogging.png";
+import Plane from "../../Assets/Images/plane-icon.png";
 import "./navbar.scss";
 
 const Navbar = function(){
@@ -39,11 +40,17 @@ const Navbar = function(){
                     <img src={PhotoGallery} style={{'height': '2.5em', 'width':'auto', 'color': 'white'}} className="navbar-icon" alt="" />
                 </div>
             </Link>
+            <Link to="/travel" className="navbar-section">
+                <div id="navbar-section-6">
+                    <img src={Plane} style={{'height':'1.5em', 'width':'auto'}} className="navbar-icon" alt="" />
+                </div>
+            </Link>
             <Link to="/settings" className="navbar-section">
                 <div id="navbar-section-6">
                     <img src={Settings} style={{'height':'1.5em', 'width':'auto'}} className="navbar-icon" alt="" />
                 </div>
             </Link>
+           
         </div>
     )
 }
