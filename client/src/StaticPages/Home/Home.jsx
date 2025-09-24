@@ -15,7 +15,7 @@ import Me from '../../Assets/Images/me.jpg';
 
 const NUMGIFS = 6;
 
-function App() {
+function App( { setBackground } ){
   const [counter, setCounter] = useState(0);
   const [running, setRunning] = useState(true);
   const [time, setTime] = useState(0);
@@ -25,10 +25,7 @@ function App() {
     if (!running){
       setRunning(true)
     }
-    let container = document.querySelector('.container');
-    container.style.backgroundColor = "black";
-    let body = document.querySelector('body');
-    body.style.backgroundColor="white";
+    setBackground("white");
 
     setInterval(function(){
       let gifs = document.querySelectorAll(".games-gif");
@@ -42,7 +39,7 @@ function App() {
         gif.classList.remove('hidden');
       }
     }, 3000)
-  });
+  }, [setBackground]);
 
   return (
     <div className="home-page">

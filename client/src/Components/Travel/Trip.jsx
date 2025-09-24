@@ -7,31 +7,33 @@ import "./travel.scss";
 
 
 
-export default function Trip({ type }){
-
-    return (
-        <div className="">
-            { (type === "hawaii") && 
-                <Link to="/travel/hawaii" className="">
-                    <div id="hawaii-trip-icon" className="trip">
-                        Hawaii
-                    </div>
-                </Link>
-            }
-            { (type === "prague") && 
-                <Link to="/travel/prague" className="">
-                    <div id="prague-trip-icon" className="trip">
-                        Prague
-                    </div>
-                </Link>
-            }
-            { (type === "southamerica") && 
-                <Link to="/travel/southamerica" className="">
-                    <div id="southamerica-trip-icon" className="trip">
-                        South America
-                    </div>
-                </Link>
-            }
-        </div>
-    )
+export default function Trip({ type }) {
+    if (type === "hawaii") {
+        return (
+            <Link to="/travel/hawaii" className="trip-icon" style={{ textDecoration: 'none' }}>
+                <div id="hawaii-trip-icon" className="trip">
+                    Hawaii
+                </div>
+            </Link>
+        );
+    }
+    if (type === "prague") {
+        return (
+            <Link to="/travel/prague" className="trip-icon" style={{ textDecoration: 'none' }}>
+                <div id="prague-trip-icon" className="trip">
+                    Prague
+                </div>
+            </Link>
+        );
+    }
+    if (type === "southamerica") {
+        return (
+            <Link to="/travel/southamerica" className="trip-icon" style={{ textDecoration: 'none' }}>
+                <div id="southamerica-trip-icon" className="trip">
+                    South America
+                </div>
+            </Link>
+        );
+    }
+    return null;
 }

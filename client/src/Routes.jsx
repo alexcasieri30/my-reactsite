@@ -28,28 +28,28 @@ import AboutPage from "./Components/Shop/components/About";
 import Cart from "./Components/Shop/components/Cart/MyCart";
 import Checkout from "./Components/Shop/components/Cart/Checkout";
 import Item from "./Components/Shop/components/Items/Item";
-import Plane from './Components/Travel/Plane';
+import Plane from './Components/Travel/Travel';
 import PhotoGallery from "./Components/PhotoGallery/PhotoGallery";
 import HawaiiTrip from "./Components/Travel/trips/HawaiiTripPage";
 import PragueTrip from "./Components/Travel/trips/PragueTripPage";
 import SouthAmericaTrip from "./Components/Travel/trips/SouthAmericaTripPage";
 
-const routes = [
+const getRoutes = (setBackground) => [
 
-    <Route path="/" element={<Home/>}/>,
-    <Route path="/about" element={<About/>}/>,
-    <Route path="/blog" element={<Blog/>}/>,
-    <Route path="/blog/users" element={<BlogUsers/>}/>,
-    <Route path="/settings" element={<Settings/>}/>,
-    <Route path="/travel" element={<Plane/>}/>,
-    <Route path="/ml" element={<ML/>}/>,
+    <Route path="/" element={<Home setBackground={setBackground}/>}/>,
+    <Route path="/about" element={<About setBackground={setBackground}/>}/>,
+    <Route path="/blog" element={<Blog setBackground={setBackground}/>}/>,
+    <Route path="/blog/users" element={<BlogUsers setBackground={setBackground}/>}/>,
+    <Route path="/settings" element={<Settings setBackground={setBackground}/>}/>,
+    <Route path="/travel" element={<Plane setBackground={setBackground}/>}/>,
+    <Route path="/ml" element={<ML setBackground={setBackground}/>}/>,
 
     // <Route path="/chooseGameType" element={<ChooseGameType/>}/>,
     <Route path="/fullscreengames" element={<FullScreenGames/>}/>,
     <Route path="/fullscreengames/where" element={<WheresWaldo/>}/>,
 
 
-    <Route path="/games" element={<Games/>}/>,
+    <Route path="/games" element={<Games setBackground={setBackground}/>}/>,
     <Route path="/games/memory" element={<Memory />}/>,
     <Route path="/games/cv_letter" element={<CVLetter/>}/>,
     <Route path="/games/sketch" element={<Sketch/>}/>,
@@ -58,9 +58,9 @@ const routes = [
 
     <Route path="/photo-gallery" element={<PhotoGallery/>}/>,
 
-    <Route path="/travel/hawaii" element={<HawaiiTrip/>}/>,
-    <Route path="/travel/prague" element={<PragueTrip/>}/>,
-    <Route path="/travel/southamerica" element={<SouthAmericaTrip/>}/>,
+    <Route path="/travel/hawaii" element={<HawaiiTrip setBackground={setBackground}/>}/>,
+    <Route path="/travel/prague" element={<PragueTrip setBackground={setBackground}/>}/>,
+    <Route path="/travel/southamerica" element={<SouthAmericaTrip setBackground={setBackground}/>}/>,
 
     <Route path="/shop" element={<Shop/>}/>,
     <Route path="/shop/all" element={<ShopAll/>}/>,
@@ -99,4 +99,4 @@ const routes = [
     <Route path="/shop/item/24" element={<Item name="Clothing item 6" price="32.89" imageSource="images/clothes6"/>}/>,
 ]
 
-export default routes;
+export default getRoutes;

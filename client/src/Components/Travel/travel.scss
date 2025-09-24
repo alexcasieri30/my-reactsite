@@ -1,23 +1,66 @@
 .travel-container{
-    margin-top: 400px;
+    margin-top: 200px;
 }
 
 .trip-icon-grid {
   display: grid;
-  grid-template-columns: repeat(4, 250px); /* 4 fixed columns */
-  gap: 100px;                              /* space between items */
-  justify-content: start;                  /* align grid to left */
-  width: calc(4 * 250px + 3 * 100px);      /* exact width for 4 cols + 3 gaps */
-  margin: 0 auto;                          /* center horizontally */
+  grid-template-columns: repeat(4, 250px); 
+  gap: 100px;                              
+  justify-content: start;               
+  width: calc(4 * 250px + 3 * 100px);     
+  margin: 0 auto;                          
 }
 
 
 .trip-icon {
   width: 250px;
   height: 400px;
-  background: lightgray;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #22223b;
+  transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s cubic-bezier(.4,0,.2,1), background 0.18s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.trip-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(100, 181, 246, 0.08) 0%, rgba(255, 255, 255, 0.12) 100%);
+  opacity: 0;
+  transition: opacity 0.18s;
+}
+
+.trip-icon:hover {
+  transform: translateY(-8px) scale(1.03) rotate(-1deg);
+  box-shadow: 0 8px 32px rgba(100,181,246,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+}
+
+.trip-icon:hover::before {
+  opacity: 1;
+}
+
+.trip-icon-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    max-height: max-content;
+    max-width: max-content;
+}
+
+.trip{
+    max-height: max-content;
+    max-width: max-content;
 }
