@@ -1,4 +1,3 @@
-
 .games-feature-creative {
     display: flex;
     justify-content: center;
@@ -909,4 +908,26 @@ $--typewriter_speed: 4s;
     filter: invert(100%);
     outline: thick solid white;
     outline-width: 10px;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  width: 15px;
+}
+html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+  background: #181818;
+  border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4AF626 0%, #00bcd4 40%, #f7e26b 80%, #e1306c 100%);
+  border-radius: 10px;
+  min-height: 40px;
+  box-shadow: 0 2px 8px 0 #00bcd488;
+  border: 2px solid #fff2;
+}
+html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #e1306c 0%, #f7e26b 40%, #00bcd4 80%, #4AF626 100%);
+  box-shadow: 0 4px 12px 0 #4AF62688;
+}
+html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #00bcd4 0%, #4AF626 100%);
 }
