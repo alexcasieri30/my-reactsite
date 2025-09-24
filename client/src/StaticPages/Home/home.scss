@@ -911,23 +911,23 @@ $--typewriter_speed: 4s;
 }
 
 html::-webkit-scrollbar, body::-webkit-scrollbar {
-  width: 15px;
+  width: 14px;
 }
 html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
   background: #181818;
-  border-radius: 10px;
+  border-radius: 0;
 }
 html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #4AF626 0%, #00bcd4 40%, #f7e26b 80%, #e1306c 100%);
-  border-radius: 10px;
+  background: linear-gradient(135deg, #00bcd4 0%, #f7e26b 60%, #e1306c 100%);
+  border-radius: 0;
   min-height: 40px;
-  box-shadow: 0 2px 8px 0 #00bcd488;
+  box-shadow: none;
   border: 2px solid #fff2;
 }
 html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #e1306c 0%, #f7e26b 40%, #00bcd4 80%, #4AF626 100%);
-  box-shadow: 0 4px 12px 0 #4AF62688;
+  background: linear-gradient(135deg, #e1306c 0%, #f7e26b 60%, #00bcd4 100%);
+  box-shadow: none;
 }
 html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(135deg, #00bcd4 0%, #4AF626 100%);
+  background: linear-gradient(135deg, #00bcd4 0%, #e1306c 100%);
 }
