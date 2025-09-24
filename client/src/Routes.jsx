@@ -1,5 +1,4 @@
 import {Route} from "react-router-dom";
-import ScrollToTop from './ScrollToTop';
 import Games from './App';
 import ChooseGameType from "./Components/Utilities/Dropdown/Dropdown";
 import FullScreenGames from "./Components/Games/FullScreenGames";

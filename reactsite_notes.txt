@@ -81,3 +81,22 @@ GAMES PAGE --> MACHINE LEARNING PAGE
 		- user upload input style
 		- will have to do more research on this
 
+--------------------
+
+
+NEW NOTES
+
+Some simple updates:
+
+- Update the navbar to view the Homepage, 
+photogallery, and travel pages more easily. 
+- Put the games stuff in a smaller side widget
+- some kind of a map feature in the travel section 
+that shows different travel destinations, or documents
+each stop on a specific trip. 
+- videos or small clips playing on repeat on a page
+
+
+Larger updates:
+
+- update the home page with updated information
