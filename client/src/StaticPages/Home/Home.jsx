@@ -3,14 +3,6 @@ import ProjectNavbar from "../../Components/ProjectNavbar/ProjectNavbar";
 import { useEffect, useState } from "react";
 import "./home.scss";
 import mario from '../../Assets/Gifs/5UKF.gif';
-import city from '../../Assets/Gifs/N0K.gif';
-import runningGuy from '../../Assets/Gifs/l1G.gif';
-import pow from '../../Assets/Gifs/1IZc.gif';
-import random from '../../Assets/Gifs/3D8r.gif';
-import loading from '../../Assets/Gifs/ZWdx.gif';
-import sky from '../../Assets/Gifs/2P9x.gif'
-import shoppingCart from '../../Assets/Gifs/SxH.gif';
-import gearGif from '../../Assets/Gifs/gear_gif.gif';
 import Me from '../../Assets/Images/me.jpg';
 
 const NUMGIFS = 6;
@@ -145,7 +137,7 @@ function App( { setBackground } ){
               <li>Basketball</li>
               <li>Jiu Jitsu + Martial Arts</li>
               <li>Hiking, running, and outdoor adventures</li>
-              <li>Traveling</li>
+              <li>Traveling</li>docker
               <li>Being Outdoors</li>
             </ul>
           </div>

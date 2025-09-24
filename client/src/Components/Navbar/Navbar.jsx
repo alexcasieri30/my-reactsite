@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Home from "../../Assets/Images/home.png";
 import Settings from "../../Assets/Images/settings.png";
@@ -10,49 +10,72 @@ import Blog from "../../Assets/Images/blogging.png";
 import Plane from "../../Assets/Images/plane-icon.png";
 import "./navbar.scss";
 
-const Navbar = function(){
-    
-    return (
-        <div className="main-navbar-container">
 
+const Navbar = function(){
+    const [visible, setVisible] = useState(true);
+    const lastScroll = useRef(window.scrollY);
+    const mouseZone = useRef(null);
+
+    // Removed scroll-based hiding logic; navbar visibility is now mouse-based only
+
+
+    useEffect(() => {
+        let inZone = false;
+        const handleMouseMove = (e) => {
+            if (e.clientY < 60) {
+                if (!inZone) {
+                    setVisible(true);
+                    inZone = true;
+                }
+            } else {
+                if (inZone) {
+                    setVisible(false);
+                    inZone = false;
+                }
+            }
+        };
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
+
+    return (
+        <div className={`main-navbar-container${visible ? '' : ' navbar-hidden'}`} ref={mouseZone}>
             <Link to="/about" className="navbar-section">
                 <div id="navbar-section-2">
-                    <img src={About} style={{'height':'1.5em', 'width':'auto'}} className="navbar-icon" alt="" />
+                    <img src={About} className="navbar-icon" alt="About" />
                 </div>
             </Link>
             {/* <Link to="/blog" className="navbar-section">
                 <div id="navbar-section-3">
-                    <img src={Blog} style={{'height':'1.5em', 'width':'auto'}} className="navbar-icon" alt="" />
+                    <img src={Blog} className="navbar-icon" alt="Blog" />
                 </div>
             </Link> */}
             <Link to="/" className="navbar-section">
                 <div id="navbar-section-1">
-                    <img src={Home} style={{'height':'2.5em', 'width':'auto'}} className="navbar-icon" alt="" />
+                    <img src={Home} className="navbar-icon" alt="Home" />
                 </div>
             </Link>
             <Link to="/games" className="navbar-section">
                 <div id="navbar-section-5">
-                    <img src={Games} style={{'height':'2.5em', 'width':'auto'}} className="navbar-icon" alt="" />
+                    <img src={Games} className="navbar-icon" alt="Games" />
                 </div>
             </Link>
             <Link to="/photo-gallery" className="navbar-section" state={{items: []}}>
                 <div id="navbar-section-4">
-                    <img src={PhotoGallery} style={{'height': '2.5em', 'width':'auto', 'color': 'white'}} className="navbar-icon" alt="" />
+                    <img src={PhotoGallery} className="navbar-icon" alt="Photo Gallery" />
                 </div>
             </Link>
             <Link to="/travel" className="navbar-section">
                 <div id="navbar-section-6">
-                    <img src={Plane} style={{'height':'1.5em', 'width':'auto'}} className="navbar-icon" alt="" />
+                    <img src={Plane} className="navbar-icon" alt="Travel" />
                 </div>
             </Link>
             <Link to="/settings" className="navbar-section">
                 <div id="navbar-section-6">
-                    <img src={Settings} style={{'height':'1.5em', 'width':'auto'}} className="navbar-icon" alt="" />
+                    <img src={Settings} className="navbar-icon" alt="Settings" />
                 </div>
             </Link>
-           
         </div>
-    )
+    );
 }
-
 export default Navbar;

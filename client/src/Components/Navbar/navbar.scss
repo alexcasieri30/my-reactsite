@@ -1,22 +1,49 @@
-.main-navbar-container{
-    display:flex;
-    flex-direction:row;
-    text-align:center;
+
+.main-navbar-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
     margin-left: 20%;
     margin-right: 20%;
     width: 60%;
-    background-color: rgba(0,0,0,0.2);
+    background: rgba(20, 20, 30, 0.95);
+    border-radius: 2.5em;
+    box-shadow: 0 4px 32px 0 #00bcd488, 0 1.5px 8px 0 #4AF62644;
+    padding: 0.5em 1.5em;
     position: fixed;
     top: 0;
-    z-index: -1;
-    .navbar-section{
-        flex: 0.25;
-        padding: 10px;
-        &:hover{
-            cursor: pointer;
-            background-color: rgba(0,0,0,0.3);
-        }
-    }
+    z-index: 100;
+    transition: transform 0.45s cubic-bezier(.77,0,.18,1), box-shadow 0.2s, background 0.2s;
+}
+.navbar-hidden {
+    transform: translateY(-100%);
+    pointer-events: none;
+}
+.main-navbar-container .navbar-section {
+    flex: 0.25;
+    padding: 12px 0 12px 0;
+    border-radius: 2em;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin: 0 0.5em;
+    position: relative;
+    z-index: 1;
+}
+.main-navbar-container .navbar-section:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, #4AF62622 0%, #00bcd422 100%);
+    box-shadow: 0 0 16px 2px #00bcd4cc, 0 0 8px 1px #4AF62699;
+}
+.main-navbar-container .navbar-icon {
+    height: 2.2em;
+    width: 2.2em;
+    min-width: 2.2em;
+    min-height: 2.2em;
+    max-width: 2.2em;
+    max-height: 2.2em;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    filter: invert(100%);
 }
 
 
