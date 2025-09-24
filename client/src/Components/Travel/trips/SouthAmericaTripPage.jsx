@@ -1,6 +1,7 @@
 
 import "./southamerica.scss";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function SouthAmericaTrip({ setBackground }){
     useEffect(() => {
@@ -9,6 +10,13 @@ export default function SouthAmericaTrip({ setBackground }){
     }, []);
     return (
         <div className="trip-details-container">
+            {/* Back button moved above hero for better flow */}
+            <div className="sa-back-link-wrapper">
+                <Link to="/travel" className="sa-back-link">
+                    <span className="sa-back-icon">&#8592;</span>
+                    <span className="sa-back-text">Back to All Trips</span>
+                </Link>
+            </div>
             <div className="sa-hero">
                 <img className="sa-hero-img" src="http://localhost:3001/uploads/iguazu-falls-1.jpeg" alt="Buenos Aires Letters" />
                 <div className="sa-hero-overlay">
@@ -84,7 +92,8 @@ export default function SouthAmericaTrip({ setBackground }){
                     <img className="trip-image" src="http://localhost:3001/uploads/buenosaires-boca-1.jpeg"/>
                 </div>
             </div>
-         
+
+
             <div className="sa-trip-section">
                 <div>
                     <p className="sa-trip-text">
@@ -103,7 +112,7 @@ export default function SouthAmericaTrip({ setBackground }){
                     <img className="trip-image" src="http://localhost:3001/uploads/buenosaires-tango-1.jpeg"/>
                 </div>
                 <div>
-                    <img className="trip-image" src=""/>
+                    <img className="trip-image" src="http://localhost:3001/uploads/buenosaires-plazamayor-1.jpeg"/>
                 </div>
             </div>
             <div className="sa-trip-section">
@@ -130,18 +139,18 @@ export default function SouthAmericaTrip({ setBackground }){
                     <img className="trip-image" src="http://localhost:3001/uploads/ricoleta-cemetery-1.jpeg"/>
                 </div>
                 <div>
-                    <img className="trip-image" src="http://localhost:3001/uploads/ricoleta-cemetery-2.jpeg"/>
-                </div>
-                <div>
                     <img className="trip-image" src="http://localhost:3001/uploads/ricoleta-cemetery-3.jpeg"/>
                 </div>
                 <div>
-                    <img className="trip-image" src="http://localhost:3001/uploads/tortoni-breakfast-2.jpeg"/>
+                    <img className="trip-image" src="http://localhost:3001/uploads/trade-skybar-1.jpeg"/>
+                </div>
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/don-julio-1.jpeg"/>
                 </div>
             </div>
             <div className="sa-trip-section">
                 <div>
-                    <img className="trip-image" src="http://localhost:3001/uploads/tortoni-breakfast-1.jpeg"/>
+                    <img className="trip-image" src="http://localhost:3001/uploads/don-julio-2.jpeg"/>
                 </div>
                 <div>
                     <p className="sa-trip-text">
@@ -161,8 +170,10 @@ export default function SouthAmericaTrip({ setBackground }){
                     </p>
                 </div>
             </div>
+
+            <div className="sa-section-header">Iguazu Falls</div>
+
             <div className="sa-trip-section">
-                
                 <div>
                     <p className="sa-trip-text">
                         The next day, we had a flight to Iguazu Falls at 1pm. We woke up, got breakfast at a local cafe, then headed to the airport.
@@ -176,11 +187,11 @@ export default function SouthAmericaTrip({ setBackground }){
                     </p>
                 </div>
                 <div>
-                    <img className="trip-image" src=""/>
+                    <img className="trip-image" src="http://localhost:3001/uploads/iguazu-boat-1.jpeg"/>
                 </div>
                
                 <div>
-                    <img className="trip-image" src=""/>
+                    <img className="trip-image" src="http://localhost:3001/uploads/iguazu-devilsthroat-2.jpeg"/>
                 </div>
             </div>
         </div>
