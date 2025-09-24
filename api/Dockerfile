@@ -10,6 +10,8 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install --legacy-peer-deps
 
+RUN npm install nodemon
+
 # Copy the rest of the API source code
 COPY . .
 
@@ -17,4 +19,4 @@ COPY . .
 EXPOSE 5000
 
 # Start the API server
-CMD ["node", "index.js"]
+CMD ["npx", "nodemon", "index.js"]

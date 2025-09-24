@@ -1,0 +1,39 @@
+
+.homepage-container {
+    height: 200px;
+    width: 1000px;
+    display: flex;
+}
+
+.homepage-item {}
+
+
+.homepage-features {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 500px;
+}
+
+.homepage-feature-section {
+    max-width: 1000px;
+    margin: 100px;
+    display: block;
+    margin-bottom: 300px;
+}
+
+.see-more {
+    height: 40px;
+    color: rgba(100, 149, 237, 0.7);
+    /* Cornflower Blue */
+    font-size: 18pt;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.see-more-text:hover {
+    text-decoration: underline;
+}

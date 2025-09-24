@@ -1,3 +1,217 @@
+
+.games-feature-creative {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0 3em 0;
+}
+.games-mario-block {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #f7e26b 60%, #e6b800 100%);
+    border-radius: 1.5em;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+    padding: 1.5em 2.5em;
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+        transform: translateY(-8px) scale(1.03);
+    }
+    .games-mario-img {
+        width: 80px;
+        height: 80px;
+        filter: drop-shadow(0 2px 8px #22223b44);
+        animation: mario-jump 2s infinite cubic-bezier(.5,0,.5,1);
+        margin-right: 1.5em;
+    }
+    .games-block-bounce {
+        width: 60px;
+        height: 60px;
+        background: #f7c948;
+        border: 4px solid #e6b800;
+        border-radius: 0.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 2px 8px 0 #e6b80044;
+        animation: block-bounce 1.2s infinite cubic-bezier(.5,0,.5,1);
+        margin-right: 1.5em;
+    }
+    .games-block-question {
+        font-size: 2.2em;
+        font-family: 'marshmallow', cursive;
+        color: #fff;
+        text-shadow: 2px 2px 0 #e6b800, 0 0 8px #fff;
+        user-select: none;
+    }
+    .games-link-text {
+        font-size: 1.7em;
+        font-family: 'marshmallow', cursive;
+        color: #22223b;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 8px #fff8;
+        transition: color 0.2s;
+        &:hover {
+            color: #4AF626;
+        }
+    }
+}
+
+@keyframes mario-jump {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(-18px); }
+    20% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+@keyframes block-bounce {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(-12px); }
+    20% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+// --- Custom sections for Home page ---
+.home-page-interests-section {
+    margin: 4em 5em 2em 5em;
+    padding: 2em;
+    background: rgba(0, 23, 255, 0.08);
+    border-radius: 1.5em;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    .home-page-interests-title {
+        font-size: 2.5em;
+        font-family: marshmallow, cursive;
+        color: #4AF626;
+        margin-bottom: 0.5em;
+        letter-spacing: 2px;
+    }
+    .home-page-interests-body {
+        .interests-list {
+            list-style: disc inside;
+            font-size: 1.3em;
+            color: #22223b;
+            font-family: typewriter, monospace;
+            margin-left: 1em;
+            li {
+                margin-bottom: 0.5em;
+                transition: color 0.2s;
+            }
+            li:hover {
+                color: #4AF626;
+            }
+        }
+    }
+}
+
+.home-page-gallery-preview {
+    margin: 4em 5em 2em 5em;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 1.5em;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    .home-page-gallery-title {
+        font-size: 2.5em;
+        font-family: marshmallow, cursive;
+        color: #22223b;
+        margin-bottom: 0.5em;
+        letter-spacing: 2px;
+    }
+    .home-page-gallery-images {
+        display: flex;
+        gap: 2em;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1.5em;
+        .gallery-preview-img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 1em;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+            border: 2px solid #4AF626;
+            transition: transform 0.2s, box-shadow 0.2s;
+            &:hover {
+                transform: scale(1.07) rotate(-2deg);
+                box-shadow: 0 6px 24px 0 rgba(0,0,0,0.18);
+            }
+        }
+    }
+    .gallery-preview-link {
+        .gallery-preview-btn {
+            background: #4AF626;
+            color: #fff;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 0.7em;
+            padding: 0.7em 2em;
+            cursor: pointer;
+            font-family: marshmallow, cursive;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+            transition: background 0.2s, color 0.2s;
+            &:hover {
+                background: #22223b;
+                color: #4AF626;
+            }
+        }
+    }
+}
+
+.home-page-travel-preview {
+    margin: 4em 5em 2em 5em;
+    padding: 2em;
+    background: rgba(0, 255, 255, 0.08);
+    border-radius: 1.5em;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    .home-page-travel-title {
+        font-size: 2.5em;
+        font-family: marshmallow, cursive;
+        color: #22223b;
+        margin-bottom: 0.5em;
+        letter-spacing: 2px;
+    }
+    .home-page-travel-icons {
+        display: flex;
+        gap: 2em;
+        margin-bottom: 1.5em;
+        .travel-preview-icon {
+            background: #22223b;
+            color: #fff;
+            font-size: 1.1em;
+            border-radius: 0.7em;
+            padding: 0.7em 2em;
+            text-decoration: none;
+            font-family: marshmallow, cursive;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+            transition: background 0.2s, color 0.2s;
+            &:hover {
+                background: #4AF626;
+                color: #22223b;
+            }
+        }
+    }
+    .travel-preview-link {
+        .travel-preview-btn {
+            background: #22223b;
+            color: #fff;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 0.7em;
+            padding: 0.7em 2em;
+            cursor: pointer;
+            font-family: marshmallow, cursive;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+            transition: background 0.2s, color 0.2s;
+            &:hover {
+                background: #4AF626;
+                color: #22223b;
+            }
+        }
+    }
+}
 $--typewriter_speed: 4s;
 
 @font-face{
@@ -272,63 +486,131 @@ $--typewriter_speed: 4s;
             flex: 1;
             margin-top: 0;
             width: 100%;
-            .home-page-intro-myskills{
-                margin: 50px;
-                margin-top: 0;
-                height: 6em;
+            .home-page-intro-myskills {
+                margin: 50px 0 0 0;
                 border-radius: 30px;
                 text-align: center;
-                .home-page-intro-myskills-title{
+                .home-page-intro-myskills-title {
                     color: white;
                     margin-bottom: 1em;
-                    font-size: 30pt;
-                    font-family: monospace;
+                    font-size: 2.2em;
+                    font-family: marshmallow, cursive;
+                    letter-spacing: 2px;
                 }
-                .home-page-intro-myskills-body{
-                    color: white;
-                    height: 15em;
-                    display:grid;
-                    box-sizing: border-box;
-                    .home-page-intro-myskills-body-section{
-                        padding: 1.5em;
-                        border: solid 1px white;
-                        grid-template: repeat(5, 40px), repeat(5, 40px);
-                        font-family: monospace;
-                        background-color: rgba(0,0,0,0.3);
-                        box-sizing: border-box;
-                        &:hover{
-                            background-color: rgba(0,0,0,0.5);
-                            cursor: pointer;
-                            border: solid 2px blue;
-                            box-sizing: border-box;
-                        }
-                    }
+                .home-page-intro-myskills-cloud {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 1.1em 1.2em;
+                    padding: 1.5em 0 2em 0;
                 }
+                .myskill-pill {
+                    display: inline-block;
+                    padding: 0.6em 1.5em;
+                    border-radius: 2em;
+                    font-size: 1.1em;
+                    font-family: marshmallow, cursive;
+                    color: #fff;
+                    background: linear-gradient(120deg, #4AF626 60%, #22223b 100%);
+                    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+                    margin-bottom: 0.2em;
+                    margin-right: 0.2em;
+                    transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+                    cursor: pointer;
+                    border: none;
+                    font-weight: 500;
+                }
+                .myskill-pill:hover {
+                    transform: scale(1.08) rotate(-2deg);
+                    box-shadow: 0 6px 24px 0 rgba(0,0,0,0.18);
+                    background: linear-gradient(120deg, #22223b 60%, #4AF626 100%);
+                }
+                // Add some color variety
+                .myskill-pill-0 { background: linear-gradient(120deg, #4AF626 60%, #22223b 100%); }
+                .myskill-pill-1 { background: linear-gradient(120deg, #00CFFF 60%, #22223b 100%); }
+                .myskill-pill-2 { background: linear-gradient(120deg, #FFB300 60%, #22223b 100%); }
+                .myskill-pill-3 { background: linear-gradient(120deg, #FF5E5B 60%, #22223b 100%); }
+                .myskill-pill-4 { background: linear-gradient(120deg, #A259FF 60%, #22223b 100%); }
+                .myskill-pill-5 { background: linear-gradient(120deg, #43E97B 60%, #38F9D7 100%); }
             }
         }
     }
-    .home-page-about-this-site{
-        height: 100vh;
-        margin: 25em 5em 1em 5em;
-        font-family: 'Times New Roman', Times, serif;
-        .home-page-about-section-title{
-            font-size: 60pt;
-            text-align: left;
-            margin-bottom: 0.5em;
-            color: turquoise;
-            font-family: marshmallow;
-            letter-spacing: 5px;
+    // --- About Card Modern Style ---
+    .home-page-about-card {
+        margin: 4em 5em 2em 5em;
+        padding: 2.5em 2em 2em 2em;
+        background: rgba(0, 255, 255, 0.07);
+        border-radius: 1.5em;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 320px;
+        .about-card-content {
+            display: flex;
+            align-items: center;
+            gap: 2.5em;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 900px;
         }
-        .home-page-about-section-body{
-            text-align: left;
-            display:flex;
-            justify-content:center;
-            font-size: 20pt;
-            line-height: 2.5em;
-            font-family: typewriter;
+        .about-profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #4AF626;
+            box-shadow: 0 2px 12px 0 #4AF62633;
+            background: #fff;
+            margin-right: 1.5em;
+        }
+        .about-card-text {
+            flex: 1;
+            min-width: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .about-card-title {
+            font-size: 2.5em;
+            font-family: marshmallow, cursive;
+            color: #4AF626;
+            margin-bottom: 0.3em;
             letter-spacing: 2px;
-            width: 40em;
-            color: turquoise;
+            text-shadow: 0 2px 8px #fff8;
+        }
+        .about-card-body {
+            font-size: 1.25em;
+            font-family: typewriter, monospace;
+            color: #22223b;
+            line-height: 1.7em;
+            margin-bottom: 1.2em;
+            letter-spacing: 1px;
+        }
+        .about-card-highlight {
+            color: #00bcd4;
+            font-weight: 600;
+            font-family: inherit;
+        }
+        .about-card-readmore {
+            display: flex;
+            align-items: center;
+        }
+        .about-card-btn {
+            background: linear-gradient(90deg, #4AF626 60%, #00bcd4 100%);
+            color: #fff;
+            font-family: marshmallow, cursive;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 2em;
+            padding: 0.6em 2em;
+            box-shadow: 0 2px 8px 0 #4AF62633;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            &:hover {
+                background: linear-gradient(90deg, #00bcd4 60%, #4AF626 100%);
+                transform: translateY(-2px) scale(1.04);
+            }
         }
     }
     .home-page-site-features-snippet{
@@ -383,7 +665,6 @@ $--typewriter_speed: 4s;
     .home-page-footer{
         height: 10em;
     }
-
 }
 .image-container-div{
     animation-name: image-fadein;

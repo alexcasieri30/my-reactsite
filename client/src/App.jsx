@@ -4,12 +4,11 @@ import { useState } from 'react';
 import axios from 'axios'
 import "./App.scss";
 
-function Main(){
+function Main({ setBackground }){
     const [data, setData] = useState(0);
     useEffect(()=>{
-        let body = document.querySelector('body');
-        body.style.backgroundColor="black";
-    })
+        setBackground("black");
+    }, [setBackground])
     return(
         <div className="games-main-page">
             <ProjectNavbar/>
