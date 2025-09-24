@@ -7,6 +7,7 @@ import "./index.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from 'react';
 import getRoutes from './Routes';
+import ScrollToTop from './ScrollToTop';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,6 +29,7 @@ function AppContainer() {
         <div className="middle">
           <div className="left"></div>
           <div className="mid">
+            <ScrollToTop />
             <Routes>
               {getRoutes(setBackground)}
             </Routes>
