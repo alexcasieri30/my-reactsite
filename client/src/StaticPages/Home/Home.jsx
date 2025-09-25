@@ -62,55 +62,6 @@ function App( { setBackground } ){
             </div>
           </div>
         </div>
-
-        <div className="home-page-intro">
-          <div className="home-page-intro-toplevel">
-            <div className="home-page-intro-title">
-            </div>
-            <div className="home-page-intro-image-level">
-              <div className="home-page-intro-image">
-                <img id="home-page-me" src={Me} alt="" />
-              </div>
-              <div className="home-page-intro-whoami">
-                <div className="home-page-intro-whoami-wrapper">
-                  <div className="home-page-intro-whoami-static-txt">
-                    I'm a
-                  </div>
-                  <ul className="dynamic-txts">
-                    <li><span>Developer</span></li>
-                    <li><span>Designer</span></li>
-                    <li><span>Creator</span></li>
-                    <li><span>Scholar</span></li>
-                  </ul>
-                </div>
-                  <div className="home-page-intro-whoami-circles">
-                  <div id="circle1" className="circle"></div>
-                  <div id="circle2" className="circle"></div>
-                  <div id="circle3" className="circle"></div>
-                  <div id="circle4" className="circle"></div>
-                  <div id="circle5" className="circle"></div>
-                  <div id="circle6" className="circle"></div>
-                  <div id="circle7" className="circle"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="home-page-intro-bottomlevel">
-            <div className="home-page-intro-myskills">
-              <div className="home-page-intro-myskills-title">SKILLS</div>
-              <div className="home-page-intro-myskills-cloud">
-                {[
-                  'React', 'JavaScript', 'SASS', 'GIT', 'Angular', 'Python', 'Flask', 'Java',
-                  'ExpressJS', 'Django', 'Kubernetes', 'Docker', 'Data Analysis', 'Machine Learning',
-                  'MongoDB', 'SQL', 'PgAdmin', 'Postman'
-                ].map((skill, i) => (
-                  <span className={`myskill-pill myskill-pill-${i % 6}`} key={skill}>{skill}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="home-page-about-card">
           <div className="about-card-content">
             <img src={Me} alt="Alex Casieri" className="about-profile-img" />
@@ -127,6 +78,41 @@ function App( { setBackground } ){
             </div>
           </div>
         </div>
+        <div className="home-page-intro">
+          
+          <div className="home-page-intro-bottomlevel">
+            <div className="home-page-intro-myskills">
+              <div className="home-page-intro-myskills-title">SKILLS</div>
+              <div className="home-page-intro-myskills-cloud">
+                {[
+                  'React', 'JavaScript', 'SASS', 'GIT', 'Angular', 'Python', 'Flask', 'Java',
+                  'ExpressJS', 'Django', 'Kubernetes', 'Docker', 'Data Analysis', 'Machine Learning',
+                  'MongoDB', 'SQL', 'PgAdmin', 'Postman'
+                ].map((skill, i) => (
+                  <span className={`myskill-pill myskill-pill-${i % 6}`} key={skill}>{skill}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="home-page-intro-whoami">
+          <div className="home-page-intro-whoami-wrapper">
+
+          </div>
+          <div className="home-page-intro-whoami-circles">
+            <div id="circle1" className="circle"></div>
+            <div id="circle2" className="circle"></div>
+            <div id="circle3" className="circle"></div>
+            <div id="circle4" className="circle"></div>
+            <div id="circle5" className="circle"></div>
+            <div id="circle6" className="circle"></div>
+            <div id="circle7" className="circle"></div>
+            <div id="circle8" className="circle"></div>
+            <div id="circle9" className="circle"></div>
+            <div id="circle10" className="circle"></div>
+          </div>
+        </div>
+
         {/* Interests Section */}
         <div className="home-page-interests-section">
           <div className="home-page-interests-title">My Interests</div>
@@ -137,7 +123,7 @@ function App( { setBackground } ){
               <li>Basketball</li>
               <li>Jiu Jitsu + Martial Arts</li>
               <li>Hiking, running, and outdoor adventures</li>
-              <li>Traveling</li>docker
+              <li>Traveling</li>
               <li>Being Outdoors</li>
             </ul>
           </div>

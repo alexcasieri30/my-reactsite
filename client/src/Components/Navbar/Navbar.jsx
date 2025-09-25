@@ -45,11 +45,6 @@ const Navbar = function(){
                     <img src={About} className="navbar-icon" alt="About" />
                 </div>
             </Link>
-            {/* <Link to="/blog" className="navbar-section">
-                <div id="navbar-section-3">
-                    <img src={Blog} className="navbar-icon" alt="Blog" />
-                </div>
-            </Link> */}
             <Link to="/" className="navbar-section">
                 <div id="navbar-section-1">
                     <img src={Home} className="navbar-icon" alt="Home" />
