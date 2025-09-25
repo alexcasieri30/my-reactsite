@@ -1,7 +1,3 @@
 Command to upload a photo 
 
-curl 
-    -X POST "http://localhost:3001/photogallery/upload" 
-    -F "description=buenosaires caminito street" 
-    -F "title=Caminito Street 1" 
-    -F "photo=@/users/alexcasieri/desktop/buenosaires-caminito-1.jpeg"
+curl -X POST "http://localhost:3001/photogallery/upload" -F "description=buenosaires caminito street" -F "title=Caminito Street 1" -F "photo=@/users/alexcasieri/desktop/buenosaires-caminito-1.jpeg"

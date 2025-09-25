@@ -3,47 +3,30 @@ import Dropdown from "../Utilities/Dropdown/Dropdown";
 import {Link} from "react-router-dom";
 import { useEffect } from "react";
 
-function FullScreenGames(){
-
+function FullScreenGames({ setBackground }){
     useEffect(() => {
-        let container = document.querySelector(".container");
-        container.style.backgroundColor="black";
-        let mouse_move = document.querySelector(".mouse-move");
-        if (mouse_move){
-            mouse_move.addEventListener("mousemove", function(event){
-                let x = event.clientX + 280 * (event.clientX / window.innerWidth),
-                    y = event.clientY - 130 + window.scrollY + (280 * event.clientY / window.innerHeight);
-                let element = document.createElement('span');
-                    element.setAttribute('class', 'element-child');
-                    element.style.left = `${x}px`;
-                    element.style.top = `${y}px`;
-                    this.appendChild(element);
-                    setTimeout(() => {
-                        element.remove()
-                    }, 1000)
-            })
-        }
-    })
+        console.log("SETTING BACKGROUND TO BLACK");
+        setBackground("black");
+    },[]);
 
     return (
-        <div className="fullscreengames-main-container mouse-move">
+        <div className="fullscreengames-main-container">
             <div className="fullscreengames-main-container-border">
                 <div className="fullscreengames-main-container-border-inset">
-                    <div className="fullscreengames-top">
-                        <div className="fullscreengames-top-left">
-                            Change format
-                        </div>
-                        <div className="fullscreengames-top-title">
-                            <div className="fullscreengames-top-title-featured">
-                                Full Screen
+                    <div className="fullscreengames-header">
+                        <div className="fullscreengames-header-title">
+                            <div className="fullscreengames-header-title-featuredgames">
+                                <div className="fullscreengames-header-title-featured">
+                                    Full Screen
+                                </div>
+                                <div className="fullscreengames-header-title-games">
+                                    Games
+                                </div>
                             </div>
-                            <div className="fullscreengames-top-title-games">
-                                Games
-                            </div>
-                        </div>
-                        <div className="fullscreengames-top-right">
-                            <div className="fullscreengames-top-dropdown">
-                                <Dropdown currentPage={"Full Screen"}></Dropdown>
+                            <div className="fullscreengames-header-title-right">
+                                <div className="fullscreengames-header-title-right-dropdown">
+                                    <Dropdown currentPage={"Full Screen"}/>
+                                </div>
                             </div>
                         </div>
                     </div>

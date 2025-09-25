@@ -46,7 +46,7 @@ export default function getRoutes(setBackground) {
             <Route path="/settings" element={<Settings setBackground={setBackground}/>}/>
             <Route path="/travel" element={<Plane setBackground={setBackground}/>}/>
             <Route path="/ml" element={<ML setBackground={setBackground}/>}/>
-            <Route path="/fullscreengames" element={<FullScreenGames/>}/>
+            <Route path="/fullscreengames" element={<FullScreenGames setBackground={setBackground}/>}/>
             <Route path="/fullscreengames/where" element={<WheresWaldo/>}/>
             <Route path="/games" element={<Games setBackground={setBackground}/>}/>
             <Route path="/games/memory" element={<Memory />}/>
