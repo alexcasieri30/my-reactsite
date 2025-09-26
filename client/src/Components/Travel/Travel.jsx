@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Trip from "./Trip";
+import TypewriterTitle from "../PhotoGallery/features/TypewriterTitle";
 
 export default function Travel({ setBackground }){
     const [trips, setTrips] = useState([]);
@@ -14,7 +15,8 @@ export default function Travel({ setBackground }){
     }, []);
 
     return (
-        <div className="travel-container" style={{ padding: '2em', textAlign: 'center' }}>
+        <div className="travel-container" style={{ marginTop: '80px', padding: '20px', textAlign: 'center' }}>
+            <TypewriterTitle text="> cd ./travel" />
             <h1 style={{ fontWeight: 700, fontSize: '2.5rem', letterSpacing: '0.02em', color: '#22223b', marginBottom: '0.5em' }}>
                 Travels
             </h1>

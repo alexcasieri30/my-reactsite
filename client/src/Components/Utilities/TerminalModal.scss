@@ -1,0 +1,115 @@
+.terminal-icon-fixed {
+  position: fixed;
+  bottom: 24px;
+  right: 32px;
+  z-index: 10000;
+  cursor: pointer;
+  background: #181818;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px #0006;
+  border: 2px solid #4af626;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s, background 0.2s;
+  /* svg transition nested below */
+  svg {
+    transition: stroke 0.2s, filter 0.2s;
+  }
+}
+
+.terminal-icon-fixed:hover {
+  box-shadow: 0 0 32px 8px #4af626, 0 0 12px 2px #e1306c;
+  border-color: #e1306c;
+  background: #222;
+  transform: scale(1.12) rotate(-8deg);
+  svg {
+    stroke: #e1306c;
+    filter: drop-shadow(0 0 6px #4af626) drop-shadow(0 0 2px #e1306c);
+  }
+}
+.terminal-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000073;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+.terminal-modal {
+  background: #181818;
+  color: #eee;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px #0008;
+  padding: 2em 2.5em;
+  min-width: 340px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.terminal-title {
+  font-family: monospace;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.terminal-input-row {
+  display: flex;
+  align-items: center;
+}
+
+.terminal-prompt {
+  color: #4af626;
+  font-family: monospace;
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+.terminal-modal input {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 1em;
+  padding: 0.4em 0.7em;
+  width: 220px;
+  outline: none;
+}
+
+.terminal-modal button {
+  margin-left: 1em;
+  background: #4af626;
+  color: #222;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4em 1em;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.terminal-error {
+  color: #e1306c;
+  margin-top: 1em;
+  font-family: monospace;
+}
+
+.terminal-close {
+  margin-top: 1.5em;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4em 1em;
+  cursor: pointer;
+}

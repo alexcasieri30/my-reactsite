@@ -220,7 +220,7 @@ function App( { setBackground } ){
         </div>
       </div>
     </div>
-  );
+  ); 
 }
 
 export default App;

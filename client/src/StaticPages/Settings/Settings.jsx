@@ -1,5 +1,6 @@
 import "./settings.scss";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 let templateGrid = [];
 for (let i = 0; i < 784; i++){
@@ -9,6 +10,7 @@ for (let i = 0; i < 784; i++){
 function Settings(){
 
     const [grid, setGrid] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (!grid){
@@ -38,7 +40,7 @@ function Settings(){
 
     async function submitNumberGrid(){
         let querystring = grid.toString();
-        let res = await fetch(`http://localhost:5000/number?grid=${querystring}`, {mode: 'cors'})
+        let res = await fetch(`http://localhost:3001/number?grid=${querystring}`, {mode: 'cors'})
         res = await res.json();
         console.log("RES: ", res);
         setGrid([...templateGrid])
@@ -48,6 +50,10 @@ function Settings(){
             let cell = grid_snap[i];
             cell.style.backgroundColor="white";
         };
+    }
+
+    function handleTerminalSubmit(e) {
+    // Removed: now handled globally
     }
 
     return(
@@ -875,7 +881,9 @@ function Settings(){
                     </button>
                 </div>
             </div>
-            
+            <button style={{marginTop: '2em'}} onClick={() => {
+                window.dispatchEvent(new CustomEvent('open-global-terminal'));
+            }}>Open Terminal</button>
         </div>
 
     )
