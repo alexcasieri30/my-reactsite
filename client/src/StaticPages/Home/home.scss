@@ -15,13 +15,13 @@
     transition: box-shadow 0.2s, transform 0.2s;
     cursor: pointer;
     &:hover {
-        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
-        transform: translateY(-8px) scale(1.03);
-    }
-    .games-mario-img {
-        width: 80px;
-        height: 80px;
-        filter: drop-shadow(0 2px 8px #22223b44);
+        .home-page-interests-title {
+            font-size: 1.3em;
+            font-family: marshmallow, cursive;
+            color: #4AF626;
+            margin-bottom: 0.3em;
+            text-align: center;
+        }
         animation: mario-jump 2s infinite cubic-bezier(.5,0,.5,1);
         margin-right: 1.5em;
     }
@@ -36,10 +36,19 @@
         justify-content: center;
         position: relative;
         box-shadow: 0 2px 8px 0 #e6b80044;
-        animation: block-bounce 1.2s infinite cubic-bezier(.5,0,.5,1);
-        margin-right: 1.5em;
-    }
-    .games-block-question {
+        .home-page-interests-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,255,255,0.07);
+            border-radius: 0.8em;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+            padding: 0.5em 0.3em;
+            max-width: 220px;
+            margin: 0 auto 1em auto;
+          
+        }
         font-size: 2.2em;
         font-family: 'marshmallow', cursive;
         color: #fff;
@@ -86,6 +95,66 @@
         letter-spacing: 2px;
     }
     .home-page-interests-body {
+        .interests-bubble-stack {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(140px, 1fr));
+            gap: 2em 2em;
+            align-items: start;
+            min-height: 120px;
+            position: relative;
+            max-width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0.5em;
+            margin-bottom: 0.2em;
+          
+           
+        }
+        .interest-bubble-stack-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(74,246,38,0.18) 60%, rgba(0,188,212,0.18) 100%);
+            border-radius: 18px;
+            box-shadow: 0 2px 16px 0 #00bcd422, 0 1px 4px 0 #fff8;
+            padding: 0.7em 1.5em;
+            font-family: marshmallow, cursive;
+            font-size: 1.15em;
+            color: #eafcff;
+            min-width: 140px;
+            min-height: 60px;
+            margin-bottom: 0.5em;
+            transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            z-index: 1;
+            border: 2px solid rgba(255,255,255,0.18);
+            backdrop-filter: blur(2px);
+            &:hover {
+                box-shadow: 0 8px 32px 0 #4AF62633;
+                transform: scale(1.08);
+                background: linear-gradient(135deg, rgba(0,188,212,0.28) 60%, rgba(74,246,38,0.28) 100%);
+                border-color: #4AF62688;
+            }
+        }
+        .interest-bubble-stack-item.top-row {
+            margin-top: 0;
+        }
+        .interest-bubble-stack-item.bottom-row {
+            margin-top: 2.5em;
+        }
+        .interest-bubble-stack-icon {
+            font-size: 1.5em;
+            margin-right: 0.7em;
+            filter: drop-shadow(0 2px 4px #4AF62644);
+        }
+        .interest-bubble-stack-label {
+            font-size: 1.1em;
+            font-family: inherit;
+            color: #eafcff;
+            letter-spacing: 1px;
+        }
         .interests-list {
             list-style: disc inside;
             font-size: 1.3em;
@@ -130,9 +199,31 @@
             box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
             border: 2px solid #4AF626;
             transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(74,246,38,0.18) 60%, rgba(0,188,212,0.18) 100%);
+            border-radius: 7px;
+            box-shadow: 0 2px 8px 0 #00bcd422, 0 1px 4px 0 #fff8;
+            padding: 0.15em 0.4em;
+            font-family: marshmallow, cursive;
+            font-size: 0.9em;
+            color: #eafcff;
+            min-width: 60px;
+            min-height: 22px;
+            margin-bottom: 0.2em;
+            transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            z-index: 1;
+            border: 2px solid rgba(255,255,255,0.18);
+            backdrop-filter: blur(2px);
             &:hover {
-                transform: scale(1.07) rotate(-2deg);
-                box-shadow: 0 6px 24px 0 rgba(0,0,0,0.18);
+                box-shadow: 0 8px 32px 0 #4AF62633;
+                transform: scale(1.08);
+                background: linear-gradient(135deg, rgba(0,188,212,0.28) 60%, rgba(74,246,38,0.28) 100%);
+                border-color: #4AF62688;
             }
         }
     }
@@ -318,9 +409,6 @@ $--typewriter_speed: 4s;
                 flex: 0.6;
                 display:flex;
                 margin-left: 80px;
-                #image1{
-                    
-                }
                 #image6{
                     margin-left: 80px;
                     margin-top: 40px;
@@ -354,7 +442,7 @@ $--typewriter_speed: 4s;
         }
     }
     .home-page-intro{
-        height: 120vh;
+        height: 100%;
         display:flex;
         flex-direction:column;
         .home-page-intro-toplevel{
@@ -373,20 +461,18 @@ $--typewriter_speed: 4s;
                 .home-page-intro-image{
                     flex: 0.3;
                     padding: 50px;
-                    #home-page-me{
-                        width: 10em;
-                        height: auto;
-                        border-radius: 300px;
-                    }
                 }
             }
         }
         .home-page-intro-bottomlevel{
             flex: 1;
-            margin-top: 200px;
+       
+            margin-bottom: 4rem;
             width: 100%;
+
             .home-page-intro-myskills {
-                margin: 50px 0 0 0;
+                flex: 1;
+                margin: 10rem 0 0 0;
                 border-radius: 30px;
                 text-align: center;
                 .home-page-intro-myskills-title {
@@ -438,6 +524,24 @@ $--typewriter_speed: 4s;
     }
     // --- About Card Modern Style ---
     .home-page-about-card {
+    &:hover {
+        cursor: pointer;
+        cursor: url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/hand-pointer.svg'), pointer;
+        box-shadow: 0 8px 32px 0 #4AF62633;
+        transition: box-shadow 0.2s;
+    }
+    &:hover {
+        cursor: pointer;
+        cursor: url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/image.svg'), pointer;
+        box-shadow: 0 8px 32px 0 #00bcd433;
+        transition: box-shadow 0.2s;
+    }
+    &:hover {
+        cursor: pointer;
+        cursor: url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/plane.svg'), pointer;
+        box-shadow: 0 8px 32px 0 #4AF62633;
+        transition: box-shadow 0.2s;
+    }
         margin: 4em auto 2em auto;
         padding: 2.5em 2em 2em 2em;
         background: rgba(0, 255, 255, 0.07);
@@ -486,7 +590,8 @@ $--typewriter_speed: 4s;
         .about-card-body {
             font-size: 1.25em;
             font-family: typewriter, monospace;
-            color: #22223b;
+            color: #f8f8ff;
+            text-shadow: 0 2px 8px #fff8, 0 0 4px #4AF62644;
             line-height: 1.7em;
             margin-bottom: 1.2em;
             letter-spacing: 1px;
@@ -495,6 +600,8 @@ $--typewriter_speed: 4s;
             color: #00bcd4;
             font-weight: 600;
             font-family: inherit;
+            font-size: 1.25em;
+            text-shadow: 0 2px 8px #fff8, 0 0 4px #00bcd444;
         }
         .about-card-readmore {
             display: flex;
@@ -726,19 +833,23 @@ $--typewriter_speed: 4s;
 
 
 .home-page-footer-end{
-    display:flex;
-    justify-content:center;
-    .social-media-icons{
-        display:flex;
-        width: 15%;
-        .social-media-icon{
-            flex: 1;
-            display:flex;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .social-media-icons {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        width: auto;
+        gap: 2em;
+        
+        .social-media-icon {
+            flex: 0 0 auto;
+            display: flex;
             justify-content: center;
-            margin-bottom : 10px;
-            & > a{
-
-            }
+            align-items: center;
+            margin-bottom: 10px;
         }
     }
 }
@@ -839,7 +950,7 @@ html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active {
 
 .home-page-intro-whoami{
     flex: 0.7;
-    margin: 20px 50px 0 50px; // Reduce top margin
+    margin: 10rem 50px 0 50px;
     border-radius: 50px;
     text-align: center;
     font-size: 30pt;
@@ -854,13 +965,14 @@ html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active {
 .home-page-intro-whoami-circles {
     width: 100vw !important;
     max-width: 100vw;
-    margin-left: 50%;
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2vw;
+    margin-left: 50%;
     margin-bottom: 3.5em;
+    margin-top: 3.5rem;
     min-height: 90px; // Reserve space for max bounce height
 }
 .circle{
@@ -949,6 +1061,12 @@ html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active {
 }
 
 .home-page-games-card {
+    &:hover {
+        cursor: pointer;
+        cursor: url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/gamepad.svg'), pointer;
+        box-shadow: 0 8px 32px 0 #00bcd433;
+        transition: box-shadow 0.2s;
+    }
   margin: 4em auto 2em auto;
   padding: 2.5em 2em 2em 2em;
   background: rgba(0, 255, 255, 0.07);
@@ -960,6 +1078,23 @@ html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active {
   align-items: center;
   min-height: 320px;
   max-width: 1000px;
+    .games-card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 900px;
+        gap: 1.5em;
+    }
+    .games-card-title {
+        font-size: 2.5em;
+        font-family: marshmallow, cursive;
+        color: #4AF626;
+        margin-bottom: 0.3em;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 8px #fff8;
+        text-align: center;
+    }
 }
 .home-page-site-features-title {
   color: #fff;
@@ -967,4 +1102,18 @@ html::-webkit-scrollbar-thumb:active, body::-webkit-scrollbar-thumb:active {
   font-family: marshmallow, cursive;
   letter-spacing: 2px;
   margin-bottom: 1em;
+}
+
+.home-page-footer-end .social-media-icons .social-media-icon:last-child {
+  background: none !important;
+  border-radius: 50%;
+  box-shadow: none;
+  transition: none;
+}
+.home-page-footer-end .social-media-icons .social-media-icon:last-child svg {
+  background: none !important;
+  border-radius: 50%;
+  box-shadow: none;
+  fill: #111 !important;
+  filter: none !important;
 }

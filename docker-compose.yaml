@@ -37,8 +37,9 @@ services:
       - "5432:5432"
   flask_ml:
     build:
-      context: .
-      dockerfile: flask_ml/Dockerfile
+      target: dev
+      context: ./flask_ml
+      dockerfile: Dockerfile
     container_name: flask_ml
     ports:
-      - "5000:5000"
+      - "5001:5001"

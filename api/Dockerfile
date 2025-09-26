@@ -15,8 +15,7 @@ RUN npm install nodemon
 # Copy the rest of the API source code
 COPY . .
 
-# Expose port 5000 (or change to your API port)
-EXPOSE 5000
+EXPOSE 3001
 
 # Start the API server
 CMD ["npx", "nodemon", "index.js"]

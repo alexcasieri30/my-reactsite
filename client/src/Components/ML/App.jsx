@@ -38,7 +38,7 @@ function MachineLearningHome(){
             querystring = querystring + "&"
         }
         querystring = querystring.substr(0, querystring.length-1)
-        let res = await fetch(`http://localhost:5000${querystring}`, {mode: 'cors'})
+        let res = await fetch(`http://localhost:3001${querystring}`, {mode: 'cors'})
         res = await res.json();
         console.log("SUCCESS")
         setTitanicResult(res);
@@ -61,7 +61,7 @@ function MachineLearningHome(){
 
     async function submitNumberGrid(){
         let querystring = grid.toString();
-        let res = await fetch(`http://localhost:5000/number?grid=${querystring}`, {mode: 'cors'})
+        let res = await fetch(`http://localhost:3001/number?grid=${querystring}`, {mode: 'cors'})
         res = await res.json();
         console.log("RES: ", res);
         setNumbersResult([res['prediction'], res['percentages']])

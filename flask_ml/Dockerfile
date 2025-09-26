@@ -7,10 +7,10 @@ COPY . .
 
 # --- Development stage ---
 FROM base AS dev
-EXPOSE 5000
+EXPOSE 5001
 CMD ["python", "main.py"]
 
 # --- Production stage ---
 FROM base AS production
-EXPOSE 5000
-CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:5000", "--workers", "4"]
+EXPOSE 5001
+CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:5001", "--workers", "4"]

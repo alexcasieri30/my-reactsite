@@ -68,7 +68,7 @@ function App( { setBackground } ){
             <div className="about-card-text">
               <div className="about-card-title">A little about me</div>
               <div className="about-card-body">
-                Hi! I'm Alex, a lifelong explorer, creator, and learner from Deerfield, Illinois. My curiosity and passion for building things led me to a career in computer science, where I now work as a full stack software engineer. I love tackling new challenges, collaborating with others, and finding creative solutions. <span className="about-card-highlight">Let’s connect and create something awesome!</span>
+                Hi! I'm Alex, a lifelong creator from the Chicago area. My curiosity and passion for building things led me to a career in computer science, where I now work as a full stack software engineer. I love tackling new challenges, collaborating with others, and solving problems. <span className="about-card-highlight">Let’s connect and create something awesome!</span>
               </div>
               <div className="about-card-readmore">
                 <Link to="/about">
@@ -85,9 +85,9 @@ function App( { setBackground } ){
               <div className="home-page-intro-myskills-title">SKILLS</div>
               <div className="home-page-intro-myskills-cloud">
                 {[
-                  'React', 'JavaScript', 'SASS', 'GIT', 'Angular', 'Python', 'Flask', 'Java',
-                  'ExpressJS', 'Django', 'Kubernetes', 'Docker', 'Data Analysis', 'Machine Learning',
-                  'MongoDB', 'SQL', 'PgAdmin', 'Postman'
+                  'React', 'JavaScript', 'SCSS', 'GIT', 'Angular', 'Python', 'Flask', 'Kubernetes',
+                  'ExpressJS', 'Django', 'Helm', 'Docker', 'Data Analysis', 'Machine Learning',
+                  'MongoDB', 'SQL', 'PostgreSQL', 'Postman', 'Ansible', 'Jenkins'
                 ].map((skill, i) => (
                   <span className={`myskill-pill myskill-pill-${i % 6}`} key={skill}>{skill}</span>
                 ))}
@@ -117,15 +117,22 @@ function App( { setBackground } ){
         <div className="home-page-interests-section">
           <div className="home-page-interests-title">My Interests</div>
           <div className="home-page-interests-body">
-            <ul className="interests-list">
-              <li>Software Engineering + Tech</li>
-              <li>Photography</li>
-              <li>Basketball</li>
-              <li>Jiu Jitsu + Martial Arts</li>
-              <li>Hiking, running, and outdoor adventures</li>
-              <li>Traveling</li>
-              <li>Being Outdoors</li>
-            </ul>
+            <div className="interests-bubble-stack">
+              {[
+                { label: "Software Engineering + Tech", icon: "💻" },
+                { label: "Photography", icon: "📷" },
+                { label: "Basketball", icon: "🏀" },
+                { label: "Jiu Jitsu + Martial Arts", icon: "🥋" },
+                { label: "Hiking, running, and outdoor adventures", icon: "🥾" },
+                { label: "Traveling", icon: "✈️" },
+                { label: "Biking", icon: "🚴" }
+              ].map((interest, i) => (
+                <div className={`interest-bubble-stack-item${i % 2 === 0 ? ' top-row' : ' bottom-row'}`} key={interest.label}>
+                  <span className="interest-bubble-stack-icon">{interest.icon}</span>
+                  <span className="interest-bubble-stack-label">{interest.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         {/* Photo Gallery Preview */}
@@ -159,18 +166,20 @@ function App( { setBackground } ){
             </Link>
           </div>
         </div>
-        <div className="home-page-site-features-snippet">
-          <div className="home-page-site-features-title">Games</div>
-          <div className="games-feature-creative">
-            <Link className="features-link" to="/games">
-              <div className="games-mario-block">
-                <img className="games-mario-img" src={mario} alt="Mario" />
-                <div className="games-block-bounce">
-                  <span className="games-block-question">?</span>
+        <div className="home-page-games-card">
+          <div className="games-card-content">
+            <div className="games-card-title">Games</div>
+            <div className="games-feature-creative">
+              <Link className="features-link" to="/games">
+                <div className="games-mario-block">
+                  <img className="games-mario-img" src={mario} alt="Mario" />
+                  <div className="games-block-bounce">
+                    <span className="games-block-question">?</span>
+                  </div>
+                  <span className="games-link-text">Play My Games!</span>
                 </div>
-                <span className="games-link-text">Play My Games!</span>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="about-site-readmore">
@@ -202,14 +211,15 @@ function App( { setBackground } ){
           <div className="social-media-icon">
             <a href="https://instagram.com/alex.casieri" target="_blank" rel="noopener noreferrer">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6.4-7.92a1.12 1.12 0 1 1-2.24 0 1.12 1.12 0 0 1 2.24 0zM21.6 7.2c-.048-1.008-.272-1.904-.992-2.624C19.704 3.472 18.808 3.248 17.8 3.2 16.76 3.152 16.44 3.12 12 3.12s-4.76.032-5.8.08c-1.008.048-1.904.272-2.624.992C3.472 4.296 3.248 5.192 3.2 6.2c-.048 1.04-.08 1.36-.08 5.8s.032 4.76.08 5.8c.048 1.008.272 1.904.992 2.624.72.72 1.616.944 2.624.992 1.04.048 1.36.08 5.8.08s4.76-.032 5.8-.08c1.008-.048 1.904-.272 2.624-.992.72-.72.944-1.616.992-2.624.048-1.04.08-1.36.08-5.8s-.032-4.76-.08-5.8zM12 17.6a5.6 5.6 0 1 1 0-11.2 5.6 5.6 0 0 1 0 11.2zm7.2-10.4a2.4 2.4 0 1 0 0 4.8 2.4 2.4 0 0 0 0-4.8z" fill="#000"/>
+                <path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6.4-7.92a1.12 1.12 0 1 1-2.24 0 1.12 1.12 0 0 1 2.24 0zM21.6 7.2c-.048-1.008-.272-1.904-.992-2.624C19.704 3.472 18.808 3.248 17.8 3.2 16.76 3.152 16.44 3.12 12 3.12s-4.76.032-5.8.08c-1.008.048-1.904.272-2.624.992C3.472 4.296 3.248 5.192 3.2 6.2c-.048 1.04-.08 1.36-.08 5.8s.032 4.76.08 5.8c.048 1.008.272 1.904.992 2.624.72.72 1.616.944 2.624.992 1.04.048 1.36.08 5.8.08s4.76-.032 5.8-.08c1.008-.048 1.904-.272 2.624-.992.72-.72.944-1.616.992-2.624.048-1.04.08-1.36.08-5.8s-.032-4.76-.08-5.8zM12 17.6a5.6 5.6 0 1 1 0-11.2 5.6 5.6 0 0 1 0 11.2zm7.2-10.4a2.4 2.4 0 1 0 0 4.8 2.4 2.4 0 0 0 0-4.8z" fill="#E1306C"/>
               </svg>
             </a>
           </div>
         </div>
+
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 
