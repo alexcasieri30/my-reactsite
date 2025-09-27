@@ -24,7 +24,7 @@ function About( { setBackground }){
 
     return(
         <div className="about-page-container">
-            <div style={{position: 'absolute', top: '5em', left: '2.2em', zIndex: 30}}>
+            <div style={{position: 'absolute', top: '120px', left: '2.2em', zIndex: 30}}>
                 <TypewriterTitle text={"> cd ./about"}/>
             </div>
             <div className="about-toggle-card">

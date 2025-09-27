@@ -42,7 +42,13 @@ export default function TerminalModal({ show, onClose }) {
     }
 
     return (
-        <div className="terminal-modal-overlay">
+        <div className="terminal-modal-overlay" onClick={e => {
+                if (e.target === e.currentTarget) {
+                    setLsOutput(null);
+                    setHelpText(null);
+                    onClose();
+                }
+            }}>
             <div className="terminal-modal">
                 <div className="terminal-title">Terminal</div>
                 <form onSubmit={handleTerminalSubmit}>

@@ -16,7 +16,7 @@ function Main({ setBackground }){
     }, [setBackground]);
     return(
         <div className="games-main-page">
-            <div style={{position: 'absolute', top: '80px', left: '2.2em', zIndex: 30}}>
+            <div style={{position: 'absolute', top: '120px', left: '2.2em', zIndex: 30}}>
                 <TypewriterTitle text={"> cd ./games"}/>
             </div>
             <ProjectNavbar/>
