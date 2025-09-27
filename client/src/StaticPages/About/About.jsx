@@ -4,47 +4,51 @@ import { useEffect, useState } from "react";
 
 import AboutSite from "./AboutSite/AboutSite";
 import AboutMe from "./AboutMe/AboutMe";
+import TypewriterTitle from "../../Components/PhotoGallery/features/TypewriterTitle";
 
-function About(){
+function About( { setBackground }){
 
-    const [infoType, setInfoType] = useState(0);
+    const [infoType, setInfoType] = useState(1); // Default to About Me
 
     useEffect(() => {
-        let container = document.querySelector('.container');
-        container.style.backgroundColor = "white";
-        let body = document.querySelector("body");
-        body.style.backgroundColor = "white";
-    })
+        setBackground("white");
+    }, [setBackground]);
 
     function changeInfoType(e){
-        if (e.target.innerHTML == "About Me"){
+        if (e.target.dataset.toggle === "me") {
             setInfoType(1);
-        }else if (e.target.innerHTML == "About This Site"){
+        } else if (e.target.dataset.toggle === "site") {
             setInfoType(-1);
         }
     }
 
     return(
         <div className="about-page-container">
-            <div className="about-page-intro">
-                <div className="about-page-title">
-                    About
-                </div>
-                <div className="about-page-choose-section">
-                    <div className="about-page-aboutme-button" style={infoType==1?{textDecoration: 'underline'}:{}} onClick={(e) => changeInfoType(e)}>
+            <div style={{position: 'absolute', top: '5em', left: '2.2em', zIndex: 30}}>
+                <TypewriterTitle text={"> cd ./about"}/>
+            </div>
+            <div className="about-toggle-card">
+                <div className="about-page-toggle-section">
+                    <button
+                        className={`about-toggle-btn${infoType === 1 ? ' active' : ''}`}
+                        data-toggle="me"
+                        onClick={changeInfoType}
+                    >
                         About Me
-                    </div>
-                    <div className="about-page-aboutsite-button" style={infoType==-1?{textDecoration: 'underline'}:{}} onClick={(e) => changeInfoType(e)}>
+                    </button>
+                    <button
+                        className={`about-toggle-btn${infoType === -1 ? ' active' : ''}`}
+                        data-toggle="site"
+                        onClick={changeInfoType}
+                    >
                         About This Site
-                    </div>
+                    </button>
+                </div>
+                <div className="about-toggle-content">
+                    {infoType === 1 && <AboutMe />}
+                    {infoType === -1 && <AboutSite />}
                 </div>
             </div>
-            {
-                infoType==1 && <AboutMe/>
-            }
-            {
-                infoType==-1 && <AboutSite/>
-            }
         </div>
     )
 }
