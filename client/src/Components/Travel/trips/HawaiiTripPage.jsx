@@ -46,6 +46,7 @@ export default function HawaiiTrip({ setBackground }) {
             <h1 className="hawaii-header">Hawaii + Japan Trip 2025</h1>
             <div className="hawaii-timeline">
                 {timelineEntries.map((item, idx) => (
+                    <div className="hawaii-timeline-item-wrapper" key={idx}>
                     <div className="hawaii-timeline-item" key={idx}>
                         <div className="hawaii-timeline-dot" />
                         <div className="hawaii-timeline-label">{item.label}</div>
@@ -57,6 +58,7 @@ export default function HawaiiTrip({ setBackground }) {
                             {item.photo && <img src={item.photo} alt={item.label} className="hawaii-timeline-photo" />}
                             <div className="hawaii-timeline-entry">{item.entry}</div>
                         </div>
+                    </div>
                     </div>
                 ))}
             </div>
