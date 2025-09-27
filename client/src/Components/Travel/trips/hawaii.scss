@@ -86,6 +86,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 2.5rem;
+    width: 100%;
 }
 
 .hawaii-timeline-dot {
@@ -277,14 +278,16 @@
             }
 
             .hawaii-timeline-entry {
-                font-size: 1.22rem;
+                font-size: 12pt;
                 color: #2d2212;
-                line-height: 1.85;
+                line-height: 1.22;
                 font-family: 'Comic Sans MS', 'Comic Sans', 'Caveat', 'Quicksand', 'Patrick Hand', 'Segoe UI', 'Arial', sans-serif;
                 white-space: pre-line;
                 margin-top: 0.2rem;
                 letter-spacing: 0.01em;
                 text-shadow: 0 1px 0 #f8fafc, 0 0.5px 0 #e2e8f0;
+                max-height: 400px;
+                overflow-y: scroll;
             }
 
             .hawaii-timeline-photo {
@@ -314,7 +317,7 @@
 
 .hawaii-trip-text{
     flex: 0.7;
-    font-size: 20pt;
+    font-size: 12pt;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #334155;
     margin: 20px;

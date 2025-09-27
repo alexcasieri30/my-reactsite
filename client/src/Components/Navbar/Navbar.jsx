@@ -40,11 +40,11 @@ const Navbar = function(){
 
     return (
         <div className={`main-navbar-container${visible ? '' : ' navbar-hidden'}`} ref={mouseZone}>
-            <Link to="/about" className="navbar-section">
+            {/* <Link to="/about" className="navbar-section">
                 <div id="navbar-section-2">
                     <img src={About} className="navbar-icon" alt="About" />
                 </div>
-            </Link>
+            </Link> */}
             <Link to="/" className="navbar-section">
                 <div id="navbar-section-1">
                     <img src={Home} className="navbar-icon" alt="Home" />
@@ -65,11 +65,11 @@ const Navbar = function(){
                     <img src={Plane} className="navbar-icon" alt="Travel" />
                 </div>
             </Link>
-            <Link to="/settings" className="navbar-section">
+            {/* <Link to="/settings" className="navbar-section">
                 <div id="navbar-section-6">
                     <img src={Settings} className="navbar-icon" alt="Settings" />
                 </div>
-            </Link>
+            </Link> */}
         </div>
     );
 }

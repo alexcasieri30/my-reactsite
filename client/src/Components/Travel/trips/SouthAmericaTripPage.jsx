@@ -194,6 +194,56 @@ export default function SouthAmericaTrip({ setBackground }){
                     <img className="trip-image" src="http://localhost:3001/uploads/iguazu-devilsthroat-2.jpeg"/>
                 </div>
             </div>
+            <div className="sa-trip-section">
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/iguazu-devilsthroat-3.jpeg"/>
+                </div>
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/iguazu-superior-1.jpeg"/>
+                </div>
+                <div>
+                    <p className="sa-trip-text">
+                        The Devil's thorat hike required a train ride. Waiting for the train was kind of fun - we saw lots of Coati, and a few monkeys that were
+                        hopping around on the roof looking for food. The train ride was about 15 minutes, and took us through the jungle to the start of the hike. The hike
+                        was about 30 minutes on a boardwalk toward Devil's throat. The hike was scenic, but nothing compared to the Devil's throat. This is basically the biggest
+                        waterfall in the entire Iguazu Falls system. Seeing it for the first time was nothing short of breathtaking. We took lots of photos, stuck around for a bit then
+                        walked back to the train. There were 2 other hikes: Inferior and Superior. We did Superior trail first, as that got close to the 2nd largest waterfall in Iguazu,
+                        and offered views from above. The Inferior probably had better views, but was a bit further away. Both were amazing and scenic. After that, the park was almost closed, 
+                        so we headed back to the airbnb, went out for dinner, then went to bed. 
+                    </p>
+                </div>
+            </div>
+            <div className="sa-trip-section"> 
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/iguazu-brazilianside-3.jpeg"/>
+                </div>
+                <div>
+                    <p className="sa-trip-text">
+                        The next day, we had to get up early because we were crossing the border to the Brazilian side of the falls, and then flying to Rio. The border
+                        crossing was actually much easier than I had expected, but just took a long time. When we got the park again, we (for some reason) felt comfortable enough to leave our bags
+                        with the driver that we just met. This was source of stress for me for pretty much the next few hours. However, the Brazilian side of the falls was somehow even better than the Argentinian side.
+                        We couldn't get as close to the falls, but the views were better. We took a bus to the scenic point, walked out on the boardwalk, took so many photos and videos, and
+                        then went back to the entrance to find our driver. She drove us to the airport, and we waited for our flight to Rio. 
+                    </p>
+                </div>
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/iguazu-brazilianside-1.jpeg"/>
+                </div>
+            </div>
+            <div className="sa-section-header">Rio De Janeiro</div>
+            <div className="sa-trip-section"> 
+                <div>
+                    <img className="trip-image" src=""/>
+                </div>
+                <div>
+                    <p className="sa-trip-text">
+
+                    </p>
+                </div>
+                <div>
+                    <img className="trip-image" src=""/>
+                </div>
+            </div>
         </div>
     )
 }
