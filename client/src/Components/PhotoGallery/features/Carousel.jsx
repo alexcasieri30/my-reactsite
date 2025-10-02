@@ -45,7 +45,7 @@ const AnimatedCarousel = ({ imageData, theme }) => {
           />
         </AnimatePresence>
 
-        <button onClick={() => paginate(-1)} className="carouse-nav-button left">←</button>
+        <button onClick={() => paginate(-1)} className="carousel-nav-button left">←</button>
         <button onClick={() => paginate(1)} className="carousel-nav-button right">→</button>
       </div>
 

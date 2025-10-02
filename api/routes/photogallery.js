@@ -71,15 +71,35 @@ router.get('/get_images', (req, res) => {
   });
 });
 
-// GET /photogallery/:id - get photo metadata
-router.get('/:id', async (req, res) => {
-	try {
-		const result = await pool.query('SELECT * FROM photos WHERE id = $1', [req.params.id]);
-		if (result.rows.length === 0) return res.status(404).json({ error: 'Not found' });
-		res.json(result.rows[0]);
-	} catch (err) {
-		res.status(500).json({ error: err.message });
-	}
+// GET /photogallery/theme/:theme - get images matching theme
+router.get('/get_images/:theme', (req, res) => {
+  const theme = req.params.theme;
+  
+  if (!theme) {
+    return res.status(400).json({ error: 'Theme parameter is required' });
+  }
+
+  fs.readdir(UPLOADS_DIR, (err, files) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: 'Failed to list images' });
+    }
+
+    // Filter files that start with the theme pattern
+    const matchingFiles = files.filter(file => {
+      return file.toLowerCase().startsWith(theme.toLowerCase());
+    });
+
+    // Build URLs for matching files
+    const images = matchingFiles.map(file => ({
+      filename: file,
+      url: `${req.protocol}://${req.get('host')}/uploads/${file}`
+    }));
+
+	console.log("MATCHING FILES: ", images);
+
+    res.json(images);
+  });
 });
 
 module.exports = router;

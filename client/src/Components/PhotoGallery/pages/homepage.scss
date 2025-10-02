@@ -22,18 +22,40 @@
     margin-bottom: 300px;
 }
 
-.see-more {
-    height: 40px;
-    color: rgba(100, 149, 237, 0.7);
-    /* Cornflower Blue */
-    font-size: 18pt;
-    margin: auto;
+.see-more-button {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
+    z-index: 150;
+    position: relative;
+}
+
+.subtle-see-more {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(100, 149, 237, 0.6);
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    opacity: 0.3;
+    transition: all 0.3s ease;
+    z-index: 150;
+    pointer-events: auto;
+}
+
+.subtle-see-more:hover {
+    opacity: 1;
+    background: rgba(100, 149, 237, 0.1);
+    border-color: rgba(100, 149, 237, 0.4);
+    color: rgba(100, 149, 237, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(100, 149, 237, 0.2);
 }
 
 
-
-.see-more-text:hover {
-    text-decoration: underline;
+#photostack-see-more {
+    margin-top: 700px;
 }

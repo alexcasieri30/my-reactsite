@@ -47,11 +47,11 @@ export default function HawaiiTrip({ setBackground }) {
             <div className="hawaii-timeline">
                 {timelineEntries.map((item, idx) => (
                     <div className="hawaii-timeline-item-wrapper" key={idx}>
-                    <div className="hawaii-timeline-item" key={idx}>
-                        <div className="hawaii-timeline-dot" />
-                        <div className="hawaii-timeline-label">{item.label}</div>
-                        <div className="hawaii-timeline-popup">
-                            <div className="hawaii-timeline-journal-header">
+                        <div className="hawaii-timeline-item">
+                            <div className="hawaii-timeline-dot" />
+                            <div className="hawaii-timeline-label">{item.label}</div>
+                            <div className="hawaii-timeline-popup">
+                                <div className="hawaii-timeline-journal-header">
                                 <span className="hawaii-timeline-journal-icon" role="img" aria-label="journal">📓</span>
                                 <span>{item.label}</span>
                             </div>

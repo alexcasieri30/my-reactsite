@@ -5,6 +5,7 @@
     max-width: 600px;
     width: 600;
     padding: 100px;
+    z-index: -1;
 }
 
 .carousel-image-wrapper {
@@ -15,6 +16,7 @@
     border-radius: 16px;
     background: #000;
     max-height: 533px;
+    z-index: 0;
 }
 
 .carousel-image {
@@ -26,6 +28,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 .carousel-nav-button {
@@ -40,8 +43,12 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    z-index: 10;
+    z-index: 200;
     transition: background 0.2s;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-nav-button:hover {
@@ -50,10 +57,12 @@
 
 .carousel-nav-button.left {
     left: 12px;
+    z-index: 200;
 }
 
 .carousel-nav-button.right {
     right: 12px;
+    z-index: 200;
 }
 
 .carousel-thumbnails {

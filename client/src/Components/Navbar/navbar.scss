@@ -9,13 +9,18 @@
     border-radius: 2.5em;
     box-shadow: 0 8px 32px 0 #00bcd4cc, 0 2px 16px 0 #4AF62666, 0 0 0 2px #fff2;
     padding: 0.5em 1.5em;
-    position: fixed;
-    top: 0;
+    position: fixed !important;
+    top: 0 !important;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    z-index: 2147483647 !important;
+    z-index: 999999999 !important;
+    isolation: isolate;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    pointer-events: auto !important;
     transition: transform 0.45s cubic-bezier(.77,0,.18,1), box-shadow 0.2s, background 0.2s;
 }
 .navbar-hidden {
