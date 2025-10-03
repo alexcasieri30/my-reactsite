@@ -12,7 +12,7 @@ import "./navbar.scss";
 
 
 const Navbar = function(){
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
     const lastScroll = useRef(window.scrollY);
     const mouseZone = useRef(null);
 

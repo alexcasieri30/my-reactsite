@@ -15,7 +15,8 @@ const AnimatedCarousel = ({ imageData, theme }) => {
                 console.log("INFO: ", info.filename, theme)
                 let filename = info["filename"];
                 let url = info["url"];
-                if (filename.split("-")[0] == theme) {
+                let themeParts = theme.split("-");
+                if (filename.split("-")[0] == themeParts[0] && filename.split("-")[1] == themeParts[1]){
                     themePhotos.push(url);
                 }
             }
