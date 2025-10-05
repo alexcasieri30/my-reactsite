@@ -233,17 +233,96 @@ export default function SouthAmericaTrip({ setBackground }){
             <div className="sa-section-header">Rio De Janeiro</div>
             <div className="sa-trip-section"> 
                 <div>
-                    <img className="trip-image" src=""/>
+                    <img className="trip-image" src="http://localhost:3001/uploads/rio-arches-1.jpeg"/>
                 </div>
                 <div>
                     <p className="sa-trip-text">
-
+                        We landed in Rio in the late afternoon; enough time to get to the airbnb, settle in, and explore the area around our airbnb. We stayed in Copacabana. We 
+                        were a bit nervous about pickpocketed when we first got there, because of all the things we have heard about Rio. After dinner near the airbnb, and then 
+                        exploring a market, we headed back and went to bed. Luckily for us, the first day was the only day it was cloudy and raining the whole time, so we didn't 
+                        spend much time outside. The next day, the plan was to get breakfast, and then head over to Santa Teresa and explore the city center. After breakfast, I ubered
+                        us to a random location in Santa Teresa. Since we were obviously new to Rio, we weren't sure what to expect from Santa Teresa, and we didn't know where to get
+                        dropped off. We got dropped off in a random location, not too far from what seemed like a bad area of a favela. We were definitely on edge the whole time. 
                     </p>
                 </div>
                 <div>
-                    <img className="trip-image" src=""/>
+                    <img className="trip-image" src="http://localhost:3001/uploads/rio-steps-1.jpeg"/>
                 </div>
             </div>
+            <div className="sa-trip-section">
+                <div>
+                    <p className="sa-trip-text">
+                        When we got out of the sus area, we saw the Lapa Arches and the Selaron Steps. The arches and steps were cool, but the area around still felt a little bit poor and 
+                        dirty or rundown. We walked up and then back down the steps, and then toward the city center. We got lunch at Confeitaria Colombo, which was a supposedly famous place
+                        that we were recommended to try.  After the city center, we headed toward the Museo De Amanha, which happened
+                        to be closed that day. We then walked toward the aquarium, sat for a bit, then headed back to Santa Teresa for dinner and more exploring. We explored more of the area, 
+                        which ended up being my favorite area of the city after the 2nd visit. After dinner, we had bought tickets for a Botafogo soccer game, so it was time to head to the stadium. 
+                        We ubered there, watched most of the game, then left a bit early to beat the traffic. The stadium wasn't super packed, but was still a fun experience to see how intense the fans
+                        were about their team. Then we went home and got ready for the next day. 
+                    </p>
+                </div>
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/rio-cafe-1.jpeg"/>
+                </div>
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/rio-mural-1.jpeg"/>
+                </div>
+            </div>
+            <div className="sa-trip-section"> 
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/rio-christ-1.jpeg"/>
+                </div>
+                <div>
+                    <p className="sa-trip-text">
+                        The next day was the big day; Christ the Redeemer and Sugarloaf Mountain. We woke up early, got breakfast, then got in a van to the base of Christ the Redeemer. Once at the top, 
+                        there were tourists everywhere, and the status was amazing. I was a little bit overwhelmed by the size of the statue and the amount of people that were there trying to take 
+                        pictures. I got tons of pictures from all different angles, had a coffee and a cig, then headed back down. We chilled at the airbnb for a bit after that, then headed over to 
+                        Sugarloaf Mountain. We chose to hike up the mountain to the top, and then take the gandola to the mountain. The hike was kind of fun; we also saw these cool tiny monkeys on the way up. 
+                        Once at the top, the view was pretty cool, and there was a DJ and restaurants and tons of people. We waited in line for the gandola to go to sugarloaf mountain, which had even
+                        better views. We stayed for the sunset, then took the gandola back, and hiked down the mountain. We went back to the airbnb, got ready, and walked to this authentic Brazilian
+                        steakhouse called Churrascaria. The food was surprisingly amazing. It was kind of like Fogo de Chao. We walked back home after that. 
+                    </p>
+                </div>
+               
+            </div>
+            <div className="sa-trip-section"> 
+                
+                
+                <div>
+                    <p className="sa-trip-text">
+                        The last full day we had, we planned on going to Ipanema beach. We weren't sure if it was going to be a beach day or an exploring day initially. I think I was the one
+                        pushing for an exploring day. That is what it ended up being. We walked along the beach, got breakfast, drank water out of a coconut, and made it all the way to the end of Ipanema beach. 
+                        At the end was a lookout, where I took some pictures. Then we walked back through the Ipanema neighborhood, got lunch in Leblon at Boa Praca. After lunch, we walked 
+                        to the Lagoon, then made our way over to the start of Ipanema beach, where there were rocks and a solid viewpoint of the whole beach. We hung out here for a bit, took some 
+                        pictures, then walked back to our airbnb. For the night plans, we had dinner, then the Roxy Dinner Show. The show was a bit underwhelming for me; kind of felt like a tourist trap. 
+                        But it was interesting to see, and afterward we were close to the airbnb, so we called it a night. The next day, the last area we really hadn't explored much was the 
+                        Copacabana area. So we got up, got breakfast on the beach, then walked around Copacabana a bit until our checkout at 4pm, and our uber to the airport. 
+                    </p>
+                </div>
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/rio-sugarloaf-1.jpeg"/>
+                </div>
+            </div>
+            <div className="sa-trip-section"> 
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/rio-sugarloaf-2.jpeg"/>
+                </div>
+                
+                <div>
+                    <p className="sa-trip-text">
+                        Overall, the trip was very eye opening for me. It was really cool to see a new continent, new cultures, some awesome nature, and some different cities. In my mind, a lot of the 
+                        cities I've been to kind of blend in together because they are all European coded. Japan was super different from the European cities. I'd say this also was very different from 
+                        most of the European cities I've seen. Buenos Aires was similar, but Rio was very different. It didn't end up being as dangerous as we had expected. Pretty much after the first night
+                        and the next morning after that, we didn't even discuss or think about safety or being in dangerous areas. Iguazu Falls was truly amazing to see in person. Being back in 
+                        Chicago, I'm already thinking about how I can plan my next trip. 
+                    </p>
+                </div>
+                <div>
+                    <img className="trip-image" src="http://localhost:3001/uploads/rio-ipanema-1.jpeg"/>
+                </div>
+                
+            </div>
+            
         </div>
     )
 }
